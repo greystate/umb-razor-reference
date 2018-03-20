@@ -1,3 +1,22 @@
-<div class="function">
+<section class="function">
+	<h2>GetPropertyValue</h2>
 	
-</div>
+	<div class="usage">
+		<div><code>.GetPropertyValue("header")</code> => <var>object</var></div>
+		<div><code>.GetPropertyValue("alignment", "center")</code> => <var>object</var></div>
+		<div><code>.GetPropertyValue("sectionImage", true)</code> => <var>object</var></div>
+	</div>
+	
+	<div class="description">
+		<p>Returns the property value for the specified property alias</p>
+	</div>
+	
+	<div class="note">
+		<p>
+			The result type of this property value is <code>object</code> which is fine
+			in most cases since when using the above syntax, Razor will
+			automatically execute a <code>ToString()</code> on the result value.
+		</p>
+	</div>
+	
+</section>
