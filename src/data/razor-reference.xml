@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<namespace>
+	<name>IPublishedContent</name>
+	<description>
+		<p></p>
+	</description>
+
+	<include href="members.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
+	
+</namespace>
