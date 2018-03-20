@@ -1,0 +1,116 @@
+// +++ Font Sizing +++
+// Sizing with rem units - needs the root's size to be 10px (62.5% of 16px), e.g.:
+// html { font-size: @root_size; }
+//
+
+@root_px_target: 10;
+@root_size: (100% * @root_px_target / 16);
+
+.font-size(@target) {
+	font-size: (@target * 1px);
+	font-size: ((@target / @root_px_target) * 1rem);
+}
+
+.centered() {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ellipsize() {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+// Font rendering improvements
+.antialias() {
+	-webkit-font-smoothing: antialiased;
+}
+
+.improveFontRendering() {
+	.antialias;
+	
+	text-rendering: optimizelegibility;
+}
+
+.horiz-nav() {
+	list-style: none;
+	
+	li {
+		display: inline;
+		
+		a {
+			display: block;
+			float: left;
+		}
+	}
+}
+
+.nav-list() {
+	list-style: none;
+	
+	li {
+		display: block;
+		
+		a {
+			display: block;
+		}
+	}
+}
+
+.debug() {
+	background: rgba(233, 0, 0, 0.2);
+}
+
+.visuallyHidden() {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+// Reset for the `.visuallyHidden()` mixin above
+.visuallyShown() {
+	border: 0;
+	clip: none;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	padding: 0;
+	position: static;
+	width: auto;
+}
+
+
+
+// Placeholder styles
+.placeholder(@color) {
+	::-webkit-input-placeholder { color: @color; }
+	::-moz-placeholder { color: @color; }
+	:-ms-input-placeholder { color: @color; }
+}
+
+.placeholder(@color, @bg_color) {
+	::-webkit-input-placeholder { color: @color; background: @bg_color; }
+	::-moz-placeholder { color: @color; background: @bg_color; }
+	:-ms-input-placeholder { color: @color; background: @bg_color; }
+}
+
+// Force hardware acceleration
+.accelerate() {
+	-webkit-transform: translateZ(0);
+}
+
+.contain() {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
