@@ -1,0 +1,252 @@
+<h2>IPublishedContent</h2><div class="memberlist">
+<section class="property" id="CreateDate"><h2><a href="#CreateDate">CreateDate</a></h2>
+<div class="details">
+<div class="usage">
+<code>.CreateDate</code> ⇒ <var>DateTime</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="CreatorID"><h2><a href="#CreatorID">CreatorID</a></h2>
+<div class="details">
+<div class="usage">
+<code>.CreatorID</code> ⇒ <var>int</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="CreatorName"><h2><a href="#CreatorName">CreatorName</a></h2>
+<div class="details">
+<div class="usage">
+<code>.CreatorName</code> ⇒ <var>string</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="DocumentTypeAlias"><h2><a href="#DocumentTypeAlias">DocumentTypeAlias</a></h2>
+<div class="details">
+<div class="usage">
+<code>.DocumentTypeAlias</code> ⇒ <var>string</var>
+</div>
+<div class="description">
+				Returns the alias of the Document Type used by this content item.
+			</div>
+</div></section><section class="function" id="GetPropertyValue"><h2><a href="#GetPropertyValue">GetPropertyValue()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.GetPropertyValue(string <var>propertyAlias</var>, [bool <var>recursive</var>])</code> ⇒ <var>object</var>
+</div></div>
+<div class="description">
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</div>
+</div></section><section class="function" id="GetTemplateAlias"><h2><a href="#GetTemplateAlias">GetTemplateAlias()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.GetTemplateAlias()</code> ⇒ <var>string</var>
+</div></div>
+<div class="description">
+				The alias of the assigned template (if any).
+			</div>
+</div></section><section class="property" id="Id"><h2><a href="#Id">Id</a></h2>
+<div class="details">
+<div class="usage">
+<code>.Id</code> ⇒ <var>int</var>
+</div>
+<div class="description">The id of the node in Umbraco</div>
+</div></section><section class="function" id="IsVisible"><h2><a href="#IsVisible">IsVisible()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.IsVisible()</code> ⇒ <var>bool</var>
+</div></div>
+<div class="description">
+			</div>
+<div class="note">This function requires a custom property with the alias <var>umbracoNaviHide</var> to work!</div>
+</div></section><section class="property" id="Level"><h2><a href="#Level">Level</a></h2>
+<div class="details">
+<div class="usage">
+<code>.Level</code> ⇒ <var>int</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="Name"><h2><a href="#Name">Name</a></h2>
+<div class="details">
+<div class="usage">
+<code>.Name</code> ⇒ <var>string</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="Parent"><h2><a href="#Parent">Parent</a></h2>
+<div class="details">
+<div class="usage"><code>.Parent</code></div>
+<div class="description">A reference to the node's parent</div>
+</div></section><section class="property" id="Path"><h2><a href="#Path">Path</a></h2>
+<div class="details">
+<div class="usage">
+<code>.Path</code> ⇒ <var>string</var>
+</div>
+<div class="description">
+				A CSV string of the ids of the nodes in the ancestor axis, e.g.: <var>"-1,1060,2590"</var>
+			</div>
+</div></section><section class="property" id="SortOrder"><h2><a href="#SortOrder">SortOrder</a></h2>
+<div class="details">
+<div class="usage">
+<code>.SortOrder</code> ⇒ <var>int</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="TemplateId"><h2><a href="#TemplateId">TemplateId</a></h2>
+<div class="details">
+<div class="usage">
+<code>.TemplateId</code> ⇒ <var>int</var>
+</div>
+<div class="description">
+				If a template has been assigned, its id is returned here.
+			</div>
+</div></section><section class="property" id="UpdateDate"><h2><a href="#UpdateDate">UpdateDate</a></h2>
+<div class="details">
+<div class="usage">
+<code>.UpdateDate</code> ⇒ <var>DateTime</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="Url"><h2><a href="#Url">Url</a></h2>
+<div class="details">
+<div class="usage">
+<code>.Url</code> ⇒ <var>string</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="UrlName"><h2><a href="#UrlName">UrlName</a></h2>
+<div class="details">
+<div class="usage">
+<code>.UrlName</code> ⇒ <var>string</var>
+</div>
+<div class="description">
+				A URL-safe version of the node's name, e.g. for a document named <strong>About Us</strong>
+				the UrlName property would be generated as <var>about-us</var>.
+			</div>
+</div></section><section class="property" id="WriterID"><h2><a href="#WriterID">WriterID</a></h2>
+<div class="details">
+<div class="usage">
+<code>.WriterID</code> ⇒ <var>int</var>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="WriterName"><h2><a href="#WriterName">WriterName</a></h2>
+<div class="details">
+<div class="usage">
+<code>.WriterName</code> ⇒ <var>string</var>
+</div>
+<div class="description"></div>
+</div></section>
+</div><h2>Collections</h2><div class="memberlist">
+<section class="function" id="Ancestors"><h2><a href="#Ancestors">Ancestors()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.Ancestors()</code></div>
+<div><code>.Ancestors(int <var>level</var>)</code></div>
+<div><code>.Ancestors(string <var>nodeTypeAlias</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section><section class="function" id="AncestorsOrSelf"><h2><a href="#AncestorsOrSelf">AncestorsOrSelf()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.AncestorsOrSelf()</code></div>
+<div><code>.AncestorsOrSelf(string <var>nodeTypeAlias</var>)</code></div>
+<div><code>.AncestorsOrSelf(int <var>level</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section><section class="property" id="Children"><h2><a href="#Children">Children</a></h2>
+<div class="details">
+<div class="usage"><code>.Children</code></div>
+<div class="description"></div>
+</div></section><section class="function" id="Children&lt;T&gt;"><h2><a href="#Children&lt;T&gt;">Children&lt;T&gt;()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.Children&lt;T&gt;()</code> ⇒ <var>IEnumerable</var>
+</div></div>
+<div class="description">
+				Returns a collection of the children of type <strong>T</strong>.
+			</div>
+<div class="example language-csharp">
+<h3>Example</h3>
+		<pre><code>
+var newsItems = Model.Children&lt;NewsItem&gt;();
+</code></pre>
+	</div>
+</div></section><section class="property" id="ChildrenAsList"><h2><a href="#ChildrenAsList">ChildrenAsList</a></h2>
+<div class="details">
+<div class="usage"><code>.ChildrenAsList</code></div>
+<div class="description"></div>
+</div></section><section class="function" id="Descendants"><h2><a href="#Descendants">Descendants()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.Descendants()</code></div>
+<div><code>.Descendants(string <var>nodeTypeAlias</var>)</code></div>
+<div><code>.Descendants(int <var>level</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section><section class="function" id="DescendantsOrSelf"><h2><a href="#DescendantsOrSelf">DescendantsOrSelf()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.DescendantsOrSelf()</code></div>
+<div><code>.DescendantsOrSelf(int <var>level</var>)</code></div>
+<div><code>.DescendantsOrSelf(string <var>nodeTypeAlias</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section>
+</div><h2>Traversing</h2><div class="memberlist">
+<section class="property" id="Parent"><h2 class="is-ref"><a href="#Parent">Parent</a></h2>
+<div class="details">
+<div class="usage"><code>.Parent</code></div>
+<div class="description">A reference to the node's parent</div>
+</div></section><section class="function" id="Down"><h2><a href="#Down">Down()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.Down()</code></div>
+<div><code>.Down(int <var>index</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section><section class="function" id="First"><h2><a href="#First">First()</a></h2>
+<div class="details">
+<div class="usage"><div><code>.First()</code></div></div>
+<div class="description"></div>
+</div></section><section class="function" id="FirstOrDefault"><h2><a href="#FirstOrDefault">FirstOrDefault()</a></h2>
+<div class="details">
+<div class="usage"><div><code>.FirstOrDefault()</code></div></div>
+<div class="description"></div>
+</div></section><section class="function" id="Last"><h2><a href="#Last">Last()</a></h2>
+<div class="details">
+<div class="usage"><div><code>.Last()</code></div></div>
+<div class="description"></div>
+</div></section><section class="function" id="LastOrDefault"><h2><a href="#LastOrDefault">LastOrDefault()</a></h2>
+<div class="details">
+<div class="usage"><div><code>.LastOrDefault()</code></div></div>
+<div class="description"></div>
+</div></section><section class="function" id="Next"><h2><a href="#Next">Next()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.Next()</code></div>
+<div><code>.Next(int <var>index</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section><section class="function" id="Previous"><h2><a href="#Previous">Previous()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.Previous()</code></div>
+<div><code>.Previous(int <var>index</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section><section class="function" id="Sibling"><h2><a href="#Sibling">Sibling()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.Sibling(int <var>index</var>)</code></div>
+<div><code>.Sibling(string <var>nodeTypeAlias</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section><section class="function" id="Single"><h2><a href="#Single">Single()</a></h2>
+<div class="details">
+<div class="usage"><div><code>.Single()</code></div></div>
+<div class="description"></div>
+</div></section><section class="function" id="SingleOrDefault"><h2><a href="#SingleOrDefault">SingleOrDefault()</a></h2>
+<div class="details">
+<div class="usage"><div><code>.SingleOrDefault()</code></div></div>
+<div class="description"></div>
+</div></section><section class="function" id="Up"><h2><a href="#Up">Up()</a></h2>
+<div class="details">
+<div class="usage">
+<div><code>.Up()</code></div>
+<div><code>.Up(int <var>index</var>)</code></div>
+</div>
+<div class="description"></div>
+</div></section>
+</div>
