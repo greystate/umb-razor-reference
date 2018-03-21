@@ -1,22 +1,23 @@
-<section class="function">
-	<h2>GetPropertyValue</h2>
+<section class="function" id="<!-- $functionName? -->">
+	<h2><a href="#<!-- $functionName? -->"><!-- $functionName? --></a></h2>
 	
-	<div class="usage">
-		<div><code>.GetPropertyValue(string <var>propertyAlias</var>)</code> => <var>object</var></div>
-		<div><code>.GetPropertyValue(string <var>propertyAlias</var>, string <var>defaultValue</var>)</code> => <var>object</var></div>
-		<div><code>.GetPropertyValue(string <var>propertyAlias</var>, bool <var>recursive</var>)</code> => <var>object</var></div>
+	<div class="details">
+		<div class="usage">
+			<div><code>.<!-- $functionName? -->(string <var>propertyAlias</var>)</code> &rarr; <var>object</var></div>
+			<div><code>.<!-- $functionName? -->(string <var>propertyAlias</var>, string <var>defaultValue</var>)</code> &rarr; <var>object</var></div>
+			<div><code>.<!-- $functionName? -->(string <var>propertyAlias</var>, bool <var>recursive</var>)</code> &rarr; <var>object</var></div>
+		</div>
+	
+		<div class="description">
+			<p>Returns the property value for the specified property alias</p>
+		</div>
+	
+		<div class="note">
+			<p>
+				The result type of this property value is <code>object</code> which is fine
+				in most cases since when using the above syntax, Razor will
+				automatically execute a <code>ToString()</code> on the result value.
+			</p>
+		</div>
 	</div>
-	
-	<div class="description">
-		<p>Returns the property value for the specified property alias</p>
-	</div>
-	
-	<div class="note">
-		<p>
-			The result type of this property value is <code>object</code> which is fine
-			in most cases since when using the above syntax, Razor will
-			automatically execute a <code>ToString()</code> on the result value.
-		</p>
-	</div>
-	
 </section>
