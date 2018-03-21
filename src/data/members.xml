@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<members category="IPublishedContent">
+		<property name="Parent">
+			<description>A reference to the node's parent</description>
+		</property>
+		<property name="Id" type="integer">
+			<description>The id of the node in Umbraco</description>
+		</property>
+		<property name="TemplateId" type="integer">
+			<description>
+				If a template has been assigned, its id is returned here.
+			</description>
+		</property>
+		<property name="SortOrder" type="integer">
+			<description/>
+		</property>
+		<property name="Name" type="string">
+			<description/>
+		</property>
+		<property name="Url" type="string">
+			<description/>
+		</property>
+		<property name="UrlName" type="string">
+			<description>
+				A URL-safe version of the node's name, e.g. for a document named <strong>About Us</strong>
+				the UrlName property would be generated as <var>about-us</var>.
+			</description>
+		</property>
+		<property name="DocumentTypeAlias" type="string">
+			<description>
+				Returns the alias of the Document Type used by this content item.
+			</description>
+		</property>
+		<property name="WriterName" type="string">
+			<description/>
+		</property>
+		<property name="CreatorName" type="string">
+			<description/>
+		</property>
+		<property name="WriterID" type="integer">
+			<description/>
+		</property>
+		<property name="CreatorID" type="integer">
+			<description/>
+		</property>
+		<property name="Path" type="string">
+			<description>
+				A CSV string of the ids of the nodes in the ancestor axis, e.g.: <var>"-1,1060,2590"</var>
+			</description>
+		</property>
+		<property name="CreateDate" type="datetime">
+			<description/>
+		</property>
+		<property name="UpdateDate" type="datetime">
+			<description/>
+		</property>
+		<property name="Level" type="integer">
+			<description/>
+		</property>
+		<function name="GetTemplateAlias" type="string">
+			<description>
+				The alias of the assigned template (if any).
+			</description>
+		</function>
+		<function name="IsVisible" type="boolean">
+			<description>
+			</description>
+			<note>This function requires a custom property with the alias <var>umbracoNaviHide</var> to work!</note>
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" required="yes"/>
+			<argument name="recursive" type="boolean" required="no"/>
+		</function>
+	</members>
+	
+	<members category="Collections">
+		<property name="Children">
+			<description/>
+		</property>
+		<function name="Children&lt;T&gt;" type="collection">
+			<description>
+				Returns a collection of the children of type <strong>T</strong>.
+			</description>
+		</function>
+		<property name="ChildrenAsList">
+			<description/>
+		</property>
+		
+		<function name="Ancestors">
+			<description/>
+		</function>
+		<function name="Ancestors">
+			<description/>
+			<argument name="level" type="integer" required="yes"/>
+		</function>
+		<function name="Ancestors">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes" />
+		</function>
+		<function name="AncestorsOrSelf">
+			<description/>
+		</function>
+		<function name="AncestorsOrSelf">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes" />
+		</function>
+		<function name="AncestorsOrSelf">
+			<description/>
+			<argument name="level" type="integer" required="yes"/>
+		</function>
+		<function name="Descendants">
+			<description/>
+		</function>
+		<function name="Descendants">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes" />
+		</function>
+		<function name="Descendants">
+			<description/>
+			<argument name="level" type="integer" required="yes"/>
+		</function>
+		<function name="DescendantsOrSelf">
+			<description/>
+		</function>
+		<function name="DescendantsOrSelf">
+			<description/>
+			<argument name="level" type="integer" required="yes"/>
+		</function>
+		<function name="DescendantsOrSelf">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes" />
+		</function>
+	</members>
+	
+	<members category="Traversing">
+		<property ref="Parent"/>
+		<function name="First">
+			<description/>
+		</function>
+		<function name="FirstOrDefault">
+			<description/>
+		</function>
+		<function name="Last">
+			<description/>
+		</function>
+		<function name="LastOrDefault">
+			<description/>
+		</function>
+		<function name="Single">
+			<description/>
+		</function>
+		<function name="SingleOrDefault">
+			<description/>
+		</function>
+		<function name="Sibling">
+			<description/>
+			<argument name="index" type="integer" required="yes"/>
+		</function>
+		<function name="Sibling">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes"/>
+		</function>
+		<function name="Up">
+			<description/>
+		</function>
+		<function name="Up">
+			<description/>
+			<argument name="index" type="integer" required="yes"/>
+		</function>
+		<function name="Down">
+			<description/>
+		</function>
+		<function name="Down">
+			<description/>
+			<argument name="index" type="integer" required="yes"/>
+		</function>
+		<function name="Next">
+			<description/>
+		</function>
+		<function name="Next">
+			<description/>
+			<argument name="index" type="integer" required="yes"/>
+		</function>
+		<function name="Previous">
+			<description/>
+		</function>
+		<function name="Previous">
+			<description>
+			</description>
+			<argument name="index" type="integer" required="yes"/>
+		</function>
+	</members>
+</root>
