@@ -129,7 +129,7 @@
 	</xsl:template>
 
 	<xsl:template match="description | note">
-		<div class="{name()}">
+		<div class="{normalize-space(concat(@type, ' ', name()))}">
 			<xsl:apply-templates select="* | text()" mode="copy" />
 		</div>
 	</xsl:template>
