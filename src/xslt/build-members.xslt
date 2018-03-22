@@ -47,6 +47,7 @@
 				<div class="usage">
 					<xsl:apply-templates select="$overloads" mode="usage">
 						<xsl:sort select="count(argument)" data-type="number" order="ascending" />
+						<xsl:sort select="string-length(argument/@name)" data-type="number" order="ascending" />
 					</xsl:apply-templates>
 				</div>
 				
