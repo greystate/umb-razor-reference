@@ -102,6 +102,8 @@
 				
 				<xsl:apply-templates select="description" />
 				
+				<xsl:apply-templates select="$samples[@for = current()/@name]" />
+				
 				<xsl:apply-templates select="note" />
 				
 			</div>
@@ -133,7 +135,7 @@
 			<xsl:apply-templates select="* | text()" mode="copy" />
 		</div>
 	</xsl:template>
-
+	
 	<xsl:template match="@name" mode="link">
 		<a href="#{.}">
 			<xsl:value-of select="." />
