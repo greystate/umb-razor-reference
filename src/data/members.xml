@@ -91,25 +91,25 @@
 			<description/>
 		</property>
 		
-		<function name="Ancestors">
+		<function name="Ancestors" type="collection">
 			<description/>
 		</function>
-		<function name="Ancestors">
+		<function name="Ancestors" type="collection">
 			<description/>
 			<argument name="level" type="integer" required="yes"/>
 		</function>
-		<function name="Ancestors">
+		<function name="Ancestors" type="collection">
 			<description/>
 			<argument name="nodeTypeAlias" type="string" required="yes" />
 		</function>
-		<function name="AncestorsOrSelf">
+		<function name="AncestorsOrSelf" type="collection">
 			<description/>
 		</function>
-		<function name="AncestorsOrSelf">
+		<function name="AncestorsOrSelf" type="collection">
 			<description/>
 			<argument name="nodeTypeAlias" type="string" required="yes" />
 		</function>
-		<function name="AncestorsOrSelf">
+		<function name="AncestorsOrSelf" type="collection">
 			<description/>
 			<argument name="level" type="integer" required="yes"/>
 		</function>
@@ -139,60 +139,71 @@
 	
 	<members category="Traversing">
 		<property ref="Parent"/>
-		<function name="First">
+		<function name="AncestorOrSelf" type="node">
+		</function>
+		<function name="AncestorOrSelf" type="node">
+			 <argument name="level" type="int" />
+		</function>
+		<function name="AncestorOrSelf" type="node">
+			 <argument name="nodeTypeAlias" type="string" />
+		</function>
+		<function name="AncestorOrSelf" type="node">
+			<argument name="func" type="lambda" />
+		</function>
+		<function name="First" type="node">
 			<description/>
 		</function>
-		<function name="FirstOrDefault">
+		<function name="FirstOrDefault" type="node">
 			<description/>
 		</function>
-		<function name="Last">
+		<function name="Last" type="node">
 			<description/>
 		</function>
-		<function name="LastOrDefault">
+		<function name="LastOrDefault" type="node">
 			<description/>
 		</function>
-		<function name="Single">
+		<function name="Single" type="node">
 			<description/>
 		</function>
-		<function name="SingleOrDefault">
+		<function name="SingleOrDefault" type="node">
 			<description/>
 		</function>
-		<function name="Sibling">
+		<function name="Sibling" type="node">
 			<description/>
-			<argument name="index" type="integer" required="yes"/>
+			<argument name="number" type="integer" required="yes"/>
 		</function>
-		<function name="Sibling">
+		<function name="Sibling" type="node">
 			<description/>
 			<argument name="nodeTypeAlias" type="string" required="yes"/>
 		</function>
-		<function name="Up">
+		<function name="Up" type="node">
 			<description/>
 		</function>
-		<function name="Up">
+		<function name="Up" type="node">
 			<description/>
-			<argument name="index" type="integer" required="yes"/>
+			<argument name="number" type="integer" required="yes"/>
 		</function>
-		<function name="Down">
-			<description/>
-		</function>
-		<function name="Down">
-			<description/>
-			<argument name="index" type="integer" required="yes"/>
-		</function>
-		<function name="Next">
+		<function name="Down" type="node">
 			<description/>
 		</function>
-		<function name="Next">
+		<function name="Down" type="node">
 			<description/>
-			<argument name="index" type="integer" required="yes"/>
+			<argument name="number" type="integer" required="yes"/>
 		</function>
-		<function name="Previous">
+		<function name="Next" type="node">
 			<description/>
 		</function>
-		<function name="Previous">
+		<function name="Next" type="node">
+			<description/>
+			<argument name="number" type="integer" required="yes"/>
+		</function>
+		<function name="Previous" type="node">
+			<description/>
+		</function>
+		<function name="Previous" type="node">
 			<description>
 			</description>
-			<argument name="index" type="integer" required="yes"/>
+			<argument name="number" type="integer" required="yes"/>
 		</function>
 	</members>
 </root>
