@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesamples>
+	<example for="M:umbraco.library.NiceUrl(System.Int32)">
+		<pre><code><![CDATA[<a href="{umbraco.library:NiceUrl(@id)}">Link</a>]]></code></pre>
+	</example>
+
+	<example for="M:umbraco.library.md5(System.String)">
+		<pre><code><![CDATA[<!-- Hash the username for "security" -->
+<xsl:variable name="hashedName" select="umbraco.library:md5(username)" />]]></code></pre>
+	</example>
+
 	<example for="Children&lt;T&gt;"><![CDATA[var newsItems = Model.Children<NewsItem>();]]></example>
+
+	<example for="Site"><![CDATA[
+var siteRoot = Model.Site();
+// Same as:
+var siteRoot = Model.AncestorOrSelf(1);
+]]></example>
+
+	<example for="UrlName" lang="markup"><![CDATA[
+<!-- Get a meaningful ID that can be linked to -->
+<section id="@Model.UrlName">
+	<h2>@Model.Name</h2>
+	...
+</section>
+...
+<a href="#@Model.UrlName">See the @Model.Name section above</a>
+]]></example>
 </codesamples>
