@@ -63,18 +63,74 @@
 				The alias of the assigned template (if any).
 			</description>
 		</function>
-		<function name="IsVisible" type="boolean">
+		<function name="GetPropertyValue" type="object">
 			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
 			</description>
-			<note>This function requires a custom property with the alias <var>umbracoNaviHide</var> to work!</note>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
 		</function>
 		<function name="GetPropertyValue" type="object">
 			<description>
 				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
 				the value is taken from the first ancestor (or the node itself) that has a value for the property.
 			</description>
-			<argument name="propertyAlias" type="string" required="yes"/>
-			<argument name="recursive" type="boolean" required="no"/>
+			<argument name="propertyAlias" type="string" />
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="defaultValue" type="string" />
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="defaultValue" type="object" />
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+			<argument name="defaultValue" type="object" />
+		</function>
+
+		<function name="GetPropertyValue&lt;T&gt;" type="T">
+			<description>
+				Returns the value of the specified property as the type <var>T</var>.
+			</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+		<function name="GetPropertyValue&lt;T&gt;" type="T">
+			<description>
+				Outputs the value of the specified property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="defaultValue" type="T" />
+		</function>
+		<function name="GetPropertyValue&lt;T&gt;" type="T">
+			<description>
+				Outputs the value of the specified property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+		</function>
+		<function name="GetPropertyValue&lt;T&gt;" type="T">
+			<description>
+				Outputs the value of the specified property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+			<argument name="defaultValue" type="T" />
 		</function>
 	</members>
 	
@@ -153,6 +209,10 @@
 		<function name="First" type="node">
 			<description/>
 		</function>
+		<function name="FirstChild">
+			<description></description>
+			<argument name="alias" type="string" />
+		</function>
 		<function name="FirstOrDefault" type="node">
 			<description/>
 		</function>
@@ -206,4 +266,47 @@
 			<argument name="number" type="integer" required="yes"/>
 		</function>
 	</members>
+	
+	<members category="Miscellaneous">
+		<function name="HasProperty" type="boolean">
+			<description>Returns a boolean value representing if the IPublishedContent has a property with the specified alias.</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+
+		<function name="HasValue" type="boolean">
+			<description>Returns a boolean value representing if the IPublishedContent property has had a value set.</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+
+		<function name="HasValue" type="boolean">
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+		</function>
+
+		<function name="HasValue" type="html">
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+
+		<function name="IsNull" type="boolean">
+			<description>Returns a boolean value representing if the IPublishedContent property is Null.</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+
+		<function name="IsNull" type="boolean">
+			<description></description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+		</function>
+		
+		<function name="IsVisible" type="boolean">
+			<description>
+			</description>
+			<note>This function requires a custom property with the alias <var>umbracoNaviHide</var> to work!</note>
+		</function>
+		
+	</members>
+	
 </root>
