@@ -159,6 +159,10 @@
 		</xsl:copy>
 	</xsl:template>
 	
+	<xsl:template match="ref" mode="copy">
+		<a class="ref" href="#{.}"><xsl:value-of select="." /></a>
+	</xsl:template>
+	
 	<!-- Code sample templates -->
 	<xsl:template match="example">
 		<div class="example language-csharp">
