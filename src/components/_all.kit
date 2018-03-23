@@ -1,11 +1,11 @@
 <div class="component" data-title="Property">
-<!-- $propertyName: CreateDate -->
-<!-- @include "property/property" -->
+	<!-- $propertyName: CreateDate -->
+	<!-- @include "property/property" -->
 </div>
 
 <div class="component" data-title="Function">
-<!-- $functionName: GetPropertyValue -->
-<!-- @include "function/function" -->
+	<!-- $functionName: GetPropertyValue -->
+	<!-- @include "function/function" -->
 </div>
 
 <div class="component" data-title="Description">
@@ -29,9 +29,15 @@
 </div>
 
 <div class="component" data-title="MemberList">
-	<!-- @include "memberlist/memberlist" -->
+	<!-- @xinclude "memberlist/memberlist" -->
 </div>
 
 <div class="component" data-title="Example">
 	<!-- @include "example/example" -->
+</div>
+
+<div class="component" data-title="Category">
+	<!-- $categoryName: Traversing -->
+	<!-- $categoryDescription: These are used for walking up/down the tree from any other node. -->
+	<!-- @include "category/category" -->
 </div>

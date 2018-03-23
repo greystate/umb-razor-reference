@@ -4,18 +4,26 @@
 		
 		&.is-ref {
 			font-style: italic;
-			color: green;
+
+			&:hover::after {
+				float: left;
+				font-size: 0.5em;
+				font-weight: normal;
+				content: " (belong to another category but shown here as well)";
+			}
 		}
 		
 		a {
 			display: block;
 			color: inherit;
 			text-decoration: none;
+			padding: 2px 3px;
 		}
 	}
 	
-	&:hover a,
+	&:not(:target):hover a,
 	a:focus {
 		text-decoration: underline;
+		background: fade(@jacarta, 20%);
 	}
 }
