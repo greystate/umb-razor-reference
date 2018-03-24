@@ -502,23 +502,6 @@
 		"sM": 1,
 		"sU": 0
 		},
-	"\/src\/less\/docset.less": {
-		"aP": 1,
-		"bl": 1,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/docset.css",
-		"oF": 1,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 1,
-		"sU": 0
-		},
 	"\/src\/less\/forkmebanner.less": {
 		"aP": 1,
 		"bl": 1,
