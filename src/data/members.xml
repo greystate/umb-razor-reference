@@ -443,4 +443,111 @@
 		
 	</members>
 	
+	<members category="Aggregate Functions">
+		<description>
+			
+		</description>
+
+		<function name="Count" type="int">
+			<description></description>
+		</function>
+		<function name="Min" type="number">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+		<function name="Max" type="number">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+		<function name="Average" type="number">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+		<function name="Sum" type="number">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+	</members>
+	
+	<members category="UmbracoHelper" staticObject="@Umbraco">
+		<description>
+			These are available on the <code>@Umbraco</code> object inside the template.
+		</description>
+		
+		<function name="If" type="string">
+			<description>
+				Returns one of two values depending on the result of a test.
+			</description>
+			<argument name="test" type="bool" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="Truncate">
+			<description>
+				Truncates a string to a given length, can add an ellipsis (&#8230;) at the end.
+				The method checks for open HTML tags, and makes sure to close them.
+			</description>
+			<argument name="html" type="string" />
+			<argument name="length" type="int" />
+			<argument name="addElipsis" type="boolean" required="no" />
+			<argument name="treatTagsAsContent" type="boolean" required="no" />
+		</function>
+		
+		<function name="TruncateByWords" type="html">
+			<description>
+				Truncates a string to a given amount of words, can add an ellipsis (&#8230;) at the end.
+				The method checks for open HTML tags, and makes sure to close them.
+			</description>
+			<argument name="html" type="string" />
+			<argument name="words" type="int" />
+			<argument name="addElipsis" type="boolean" required="no" />
+		</function>
+		
+		<function name="Coalesce" type="string">
+			<description>
+				Returns the first non-null value in the list of arguments.
+			</description>
+			<argument name="value" type="params" />
+		</function>
+		
+		<function name="Concatenate" type="string">
+			<description>
+				Returns all of its arguments concatenated into a single string.
+			</description>
+			<argument name="value" type="params" />
+		</function>
+		
+		<function name="Join" type="string">
+			<description>
+				Returns all of its arguments joined with a specific separator between each of them.
+			</description>
+			<argument name="seperator" type="string" />
+			<argument name="value" type="params" />
+		</function>
+		
+		<function name="StripHTML" type="html">
+			<description>
+				Strips all HTML tags from a given string, all contents of the tags will remain.
+			</description>
+			<argument name="html" type="string" />
+			<argument name="tags" type="params" required="no" />
+		</function>
+		
+		<function name="ReplaceLineBreaksForHtml" type="string">
+			<description>
+				Replace linebreaks with HTML &lt;br&gt; tags.
+			</description>
+			<argument name="text" type="string" />
+		</function>
+		
+		<function name="CreateHash" type="string">
+			<description>
+				Generates a hash based on the text string passed in.
+				This method will detect the security requirements (is FIPS enabled) and return an appropriate hash.
+			</description>
+			<argument name="text" type="string" />
+		</function>
+
+	</members>
 </root>
