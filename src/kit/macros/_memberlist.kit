@@ -565,4 +565,117 @@ var widgets = Model.Children&lt;Widget&gt;().RandomOrder().FirstOrDefault();
 				
 			</p></div>
 </div></section>
+</div></section><section class="category"><header><h2>Aggregate Functions</h2>
+<div class="description"><p>
+			
+		</p></div></header><div class="memberlist">
+<section class="function" id="Average"><h2><a href="#Average">Average()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.Average(lambda <var>func</var>)</code> ⇒ <var>number</var>
+</div></div>
+<div class="description"><p></p></div>
+</div></section><section class="function" id="Count"><h2><a href="#Count">Count()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.Count()</code> ⇒ <var>int</var>
+</div></div>
+<div class="description"><p></p></div>
+</div></section><section class="function" id="Max"><h2><a href="#Max">Max()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.Max(lambda <var>func</var>)</code> ⇒ <var>number</var>
+</div></div>
+<div class="description"><p></p></div>
+</div></section><section class="function" id="Min"><h2><a href="#Min">Min()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.Min(lambda <var>func</var>)</code> ⇒ <var>number</var>
+</div></div>
+<div class="description"><p></p></div>
+</div></section><section class="function" id="Sum"><h2><a href="#Sum">Sum()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>.Sum(lambda <var>func</var>)</code> ⇒ <var>number</var>
+</div></div>
+<div class="description"><p></p></div>
+</div></section>
+</div></section><section class="category"><header><h2>UmbracoHelper</h2>
+<div class="description"><p>
+			These are available on the <code>@Umbraco</code> object inside the template.
+		</p></div></header><div class="memberlist">
+<section class="function" id="Coalesce"><h2><a href="#Coalesce">Coalesce()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.Coalesce(<var>value</var>, <var>value</var> [, <var>value …</var>])</code> ⇒ <var>string</var>
+</div></div>
+<div class="description"><p>
+				Returns the first non-null value in the list of arguments.
+			</p></div>
+</div></section><section class="function" id="Concatenate"><h2><a href="#Concatenate">Concatenate()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.Concatenate(<var>value</var>, <var>value</var> [, <var>value …</var>])</code> ⇒ <var>string</var>
+</div></div>
+<div class="description"><p>
+				Returns all of its arguments concatenated into a single string.
+			</p></div>
+</div></section><section class="function" id="CreateHash"><h2><a href="#CreateHash">CreateHash()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.CreateHash(string <var>text</var>)</code> ⇒ <var>string</var>
+</div></div>
+<div class="description"><p>
+				Generates a hash based on the text string passed in.
+				This method will detect the security requirements (is FIPS enabled) and return an appropriate hash.
+			</p></div>
+</div></section><section class="function" id="If"><h2><a href="#If">If()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.If(bool <var>test</var>, string <var>valueIfTrue</var>, [string <var>valueIfFalse</var>])</code> ⇒ <var>string</var>
+</div></div>
+<div class="description"><p>
+				Returns one of two values depending on the result of a test.
+			</p></div>
+</div></section><section class="function" id="Join"><h2><a href="#Join">Join()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.Join(string <var>seperator</var>, <var>value</var>, <var>value</var> [, <var>value …</var>])</code> ⇒ <var>string</var>
+</div></div>
+<div class="description"><p>
+				Returns all of its arguments joined with a specific separator between each of them.
+			</p></div>
+</div></section><section class="function" id="ReplaceLineBreaksForHtml"><h2><a href="#ReplaceLineBreaksForHtml">ReplaceLineBreaksForHtml()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.ReplaceLineBreaksForHtml(string <var>text</var>)</code> ⇒ <var>string</var>
+</div></div>
+<div class="description"><p>
+				Replace linebreaks with HTML &lt;br&gt; tags.
+			</p></div>
+</div></section><section class="function" id="StripHTML"><h2><a href="#StripHTML">StripHTML()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.StripHTML(string <var>html</var>,  [<var>tags</var>, <var>tags</var> [, <var>tags …</var>]])</code> ⇒ <var>html</var>
+</div></div>
+<div class="description"><p>
+				Strips all HTML tags from a given string, all contents of the tags will remain.
+			</p></div>
+</div></section><section class="function" id="Truncate"><h2><a href="#Truncate">Truncate()</a></h2>
+<div class="details">
+<div class="usage"><div><code>@Umbraco.Truncate(string <var>html</var>, int <var>length</var>, [bool <var>addElipsis</var>], [bool <var>treatTagsAsContent</var>])</code></div></div>
+<div class="description"><p>
+				Truncates a string to a given length, can add an ellipsis (…) at the end.
+				The method checks for open HTML tags, and makes sure to close them.
+			</p></div>
+</div></section><section class="function" id="TruncateByWords"><h2><a href="#TruncateByWords">TruncateByWords()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.TruncateByWords(string <var>html</var>, int <var>words</var>, [bool <var>addElipsis</var>])</code> ⇒ <var>html</var>
+</div></div>
+<div class="description"><p>
+				Truncates a string to a given amount of words, can add an ellipsis (…) at the end.
+				The method checks for open HTML tags, and makes sure to close them.
+			</p></div>
+</div></section>
 </div></section>
