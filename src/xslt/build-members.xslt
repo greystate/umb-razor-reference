@@ -68,9 +68,10 @@
 	</xsl:template>
 	
 	<xsl:template match="function" mode="usage">
+		<xsl:variable name="object" select="ancestor::members/@staticObject" />
 		<div>
 			<code>
-				<xsl:value-of select="concat('.', @name, '(')" />
+				<xsl:value-of select="concat($object, '.', @name, '(')" />
 					<xsl:for-each select="argument">
 						<xsl:apply-templates select="." />
 						<xsl:if test="not(position() = last())">, </xsl:if>
