@@ -20,6 +20,12 @@ I use [CodeKit][CK] for preprocessing the LESS file (enabling autoprefixer), and
 
 The codesamples are all in a separate XML file, so contributing a small code sample for a property or function should be super easy. (Just imagine if that was a JSON file and you had to escape all the double quotes... *crickets* ... :-)
 
+## TODO
+
+- [ ] Write the build script
+- [ ] Test the Dash docset
+- [ ] Publish somewhere on greystate.dk
+
 
 *Chriztian Steinmeier, 2018*
 
