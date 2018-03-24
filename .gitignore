@@ -4,4 +4,5 @@ config.codekit
 *.docset
 .codekit-cache
 
+dist/temp
 extensions.xml
