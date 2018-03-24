@@ -142,6 +142,14 @@
 		</div>
 	</xsl:template>
 	
+	<xsl:template match="description[not(p)] | note[not(p)]">
+		<div class="{normalize-space(concat(@type, ' ', name()))}">
+			<p>
+				<xsl:apply-templates select="* | text()" mode="copy" />
+			</p>
+		</div>
+	</xsl:template>
+	
 	<xsl:template match="@name" mode="link">
 		<a href="#{.}">
 			<xsl:value-of select="." />
