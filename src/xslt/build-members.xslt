@@ -128,13 +128,24 @@
 		<xsl:text> </xsl:text>
 		<var><xsl:value-of select="@name" /></var>
 	</xsl:template>
-
+	
 	<xsl:template match="argument[@required = 'no']">
 		<xsl:text>[</xsl:text>
 		<xsl:apply-templates select="@type" />
 		<xsl:text> </xsl:text>
 		<var><xsl:value-of select="@name" /></var>
 		<xsl:text>]</xsl:text>
+	</xsl:template>
+
+	<xsl:template match="argument[@type = 'params']" priority="1">
+		<xsl:if test="@required = 'no'"> [</xsl:if>
+		<var><xsl:value-of select="@name" /></var>
+		<xsl:text>, </xsl:text>
+		<var><xsl:value-of select="@name" /></var>
+		<xsl:text> [, </xsl:text>
+		<var><xsl:value-of select="@name" /> &#8230;</var>
+		<xsl:text>]</xsl:text>
+		<xsl:if test="@required = 'no'">]</xsl:if>
 	</xsl:template>
 
 	<xsl:template match="description | note">
