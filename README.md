@@ -25,7 +25,7 @@ The codesamples are all in a separate XML file, so contributing a small code sam
 ## TODO
 
 - [x] Write the build script
-- [ ] Test the Dash docset
+- [x] Test the Dash docset
 - [ ] Publish somewhere on greystate.dk
 
 
