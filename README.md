@@ -8,7 +8,7 @@ for [Umbraco][UMB]
 There's two main purposes for this:
 
 1. For use with [Dash][DASH] on macOS - it's the perfect app for all sorts of API/reference lookups, as it can use the editor's context for opening the correct bundle (Razor) and search for the "current" word.
-2. To serve as a [reference section] (no public link yet) on a website so you can easily point people to a URL that explains a specific property/method.
+2. To serve as a [reference section][UMBRAZREF] on a website so you can easily point people to a URL that explains a specific property/method.
 
 Feel free to use the [issue tracker][ISSUES] or perhaps even fork the repo and submit pull requests for discussion, if you see anything that's missing.
 
@@ -33,7 +33,7 @@ The codesamples are all in a separate XML file, so contributing a small code sam
 
 [DASH]: https://kapeli.com/dash/
 [UMB]: https://umbraco.com/
-[UMBRAZREF]: http://greystate.dk/resources/umbraco/razor/
+[UMBRAZREF]: http://greystate.dk/resources/umbraco/razor-reference/
 [CK]: https://codekitapp.com/
 [ISSUES]: https://github.com/greystate/umb-razor-reference/issues
 [LEA]: https://github.com/LeaVerou/
