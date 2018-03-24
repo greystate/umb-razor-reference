@@ -1,3 +1,44 @@
+html {
+	font-size: 62.5%;
+}
+
 body {
-	background: #fff;
+	font-size: 1.4em;
+	background: #ddd;
+	
+}
+
+#ref {
+	.centered();
+	
+	max-width: 60em;
+	
+	.category {
+		margin: 2em;
+	}
+	
+}
+
+@supports(display: grid) {
+
+	#ref {
+		max-width: none;
+		margin: 1em;
+		
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(60ch, 1fr));
+		grid-gap: 10px;
+		
+		.category {
+			margin: unset;
+		}
+	}
+
+} // @supports
+
+
+@media only screen and (max-width: 50ch) {
+	body {
+		font-size: 1em;
+	}
 }
