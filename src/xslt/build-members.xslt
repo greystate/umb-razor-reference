@@ -162,7 +162,6 @@
 			<xsl:when test=". = 'boolean'">bool</xsl:when>
 			<xsl:when test=". = 'datetime'">DateTime</xsl:when>
 			<xsl:when test=". = 'integer'">int</xsl:when>
-			<xsl:when test=". = 'collection'">IEnumerable</xsl:when>
 			<xsl:otherwise><xsl:value-of select="." /></xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
@@ -176,7 +175,10 @@
 	</xsl:template>
 	
 	<xsl:template match="ref" mode="copy">
-		<a class="ref" href="#{.}"><xsl:value-of select="." /></a>
+		<a class="ref" href="#{.}">
+			<xsl:value-of select="." />
+			<xsl:if test="key('functionsIndex', .)">()</xsl:if>
+		</a>
 	</xsl:template>
 	
 	<!-- Code sample templates -->
