@@ -5,7 +5,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>Umbraco Razor Quick Reference</string>
 	<key>CFBundleName</key>
-	<string>Umbraco Reference Quick Reference</string>
+	<string>Umbraco Razor Quick Reference</string>
 	<key>DocSetPlatformFamily</key>
 	<string>umbraco</string>
 	<key>isDashDocset</key>
