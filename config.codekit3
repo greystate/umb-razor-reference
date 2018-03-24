@@ -2,6 +2,14 @@
 "AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
 "buildSteps": [
 	{
+		"name": "Generate members HTML",
+		"scriptSourceString": "xsltproc -o src\/kit\/macros\/_memberlist.kit src\/xslt\/build-members.xslt src\/data\/members.xml",
+		"scriptType": 1,
+		"scriptUUIDString": "60F4383F-A593-4D46-AE8A-69F2FB7ECEF8",
+		"stepType": 2,
+		"uuidString": "77380BD3-811A-4EC3-A3EB-A9A44906F5EE"
+		},
+	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
 		"uuidString": "D57FB568-E300-4FE1-90D4-74BFD26D998D"
@@ -22,12 +30,6 @@
 		"oA": 1,
 		"oAP": "\/build\/.tm_properties",
 		"oF": 1
-		},
-	"\/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/build",
-		"oF": 0
 		},
 	"\/build.sh": {
 		"cB": 0,
@@ -114,6 +116,109 @@
 		"sM": 1,
 		"sU": 0
 		},
+	"\/src\/components\/arglist\/_arglist.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_arglist.html",
+		"oF": 0
+		},
+	"\/src\/components\/arglist\/arglist.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/arglist.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
+	"\/src\/components\/category\/_category.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_category.html",
+		"oF": 0
+		},
+	"\/src\/components\/category\/category.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/category.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
+	"\/src\/components\/description\/_description.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_description.html",
+		"oF": 0
+		},
+	"\/src\/components\/description\/description.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/description.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
+	"\/src\/components\/example\/_example-getpropertyvalue.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_example-getpropertyvalue.html",
+		"oF": 0
+		},
+	"\/src\/components\/example\/_example.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_example.html",
+		"oF": 0
+		},
+	"\/src\/components\/example\/example.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/example.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
 	"\/src\/components\/function\/_function.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -138,13 +243,6 @@
 		"sM": 1,
 		"sU": 0
 		},
-	"\/src\/components\/member\/_member.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/_member.html",
-		"oF": 0
-		},
 	"\/src\/components\/member\/member.less": {
 		"aP": 1,
 		"bl": 1,
@@ -155,6 +253,61 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/assets\/member.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
+	"\/src\/components\/memberlist\/_memberlist.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_memberlist.html",
+		"oF": 0
+		},
+	"\/src\/components\/memberlist\/memberlist.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/memberlist.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
+	"\/src\/components\/note\/_note-warning.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_note-warning.html",
+		"oF": 0
+		},
+	"\/src\/components\/note\/_note.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_note.html",
+		"oF": 0
+		},
+	"\/src\/components\/note\/note.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/note.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -186,18 +339,42 @@
 		"sM": 1,
 		"sU": 0
 		},
+	"\/src\/components\/usage\/_usage.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_usage.html",
+		"oF": 0
+		},
+	"\/src\/components\/usage\/usage.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/usage.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
 	"\/src\/data": {
 		"ft": 65536,
 		"oA": 1,
 		"oAP": "\/build\/data",
 		"oF": 0
 		},
-	"\/src\/js\/application.js": {
+	"\/src\/js\/app.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/build\/assets\/application.min.js",
+		"oAP": "\/build\/assets\/app.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -237,6 +414,13 @@
 		"oAP": "\/build\/index.html",
 		"oF": 0
 		},
+	"\/src\/kit\/macros\/_memberlist.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_memberlist.html",
+		"oF": 0
+		},
 	"\/src\/less\/app.less": {
 		"aP": 1,
 		"bl": 1,
@@ -271,6 +455,23 @@
 		"sM": 1,
 		"sU": 0
 		},
+	"\/src\/less\/doc.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/doc.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
 	"\/src\/less\/docset.less": {
 		"aP": 1,
 		"bl": 1,
@@ -281,7 +482,7 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/assets\/docset.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
@@ -373,13 +574,13 @@
 		"sM": 1,
 		"sU": 0
 		},
-	"\/vendor\/prism\/prism-coy.css": {
+	"\/vendor\/prism\/prism.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/vendor\/prism\/prism-coy.css",
+		"oAP": "\/build\/vendor\/prism\/prism.css",
 		"oF": 0,
 		"oS": 0
 		},
@@ -387,7 +588,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/build\/assets\/prism.min.js",
 		"oF": 0,
 		"sC": 0,
@@ -403,7 +604,7 @@
 	"displayValue": "umb-razor-reference",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/lib\/icon.png",
-	"lastBuiltDate": 543229923
+	"lastBuiltDate": 543542107
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
