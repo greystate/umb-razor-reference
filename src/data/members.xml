@@ -431,8 +431,8 @@
 
 		<function name="RandomOrder" type="collection">
 			<description>
-				Randomizes a collection's items. Combine with <ref>Take</ref> to get a single random piece
-				of content for display.
+				Randomizes a collection's items. Combine with <ref>Take</ref> or <ref>FirstOrDefault</ref> to get a random piece
+				of content to display somewhere.
 			</description>
 		</function>
 
