@@ -4,6 +4,12 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 >
 
+	<xsl:output method="html"
+		indent="yes"
+		omit-xml-declaration="yes"
+		doctype-system="about:legacy-compat"
+	/>
+
 	<xsl:include href="build-members.xslt" />
 
 	<!-- Override root template -->
@@ -14,7 +20,7 @@
 				<xsl:text>Umbraco Razor Quick Reference</xsl:text>
 				<xsl:value-of select="concat(' &#8212; v', docset/@version)" />
 			</title>
-			<link rel="stylesheet" href="docset.css" />
+			<link rel="stylesheet" href="app.css" />
 			<script src="app.min.js"></script>
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<xsl:comment>
