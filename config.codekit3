@@ -31,6 +31,12 @@
 		"oAP": "\/build\/.tm_properties",
 		"oF": 1
 		},
+	"\/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/build",
+		"oF": 0
+		},
 	"\/build.sh": {
 		"cB": 0,
 		"ft": 8192,
@@ -62,6 +68,12 @@
 		"oAP": "\/build\/dist",
 		"oF": 0
 		},
+	"\/img": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/img",
+		"oF": 0
+		},
 	"\/lib": {
 		"ft": 65536,
 		"oA": 1,
@@ -85,12 +97,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"\/sql": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/sql",
-		"oF": 0
 		},
 	"\/src\/components\/_all.kit": {
 		"cB": 0,
@@ -332,6 +338,30 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/assets\/property.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
+	"\/src\/components\/ref\/_ref.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_ref.html",
+		"oF": 0
+		},
+	"\/src\/components\/ref\/ref.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/ref.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -604,7 +634,7 @@
 	"displayValue": "umb-razor-reference",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/lib\/icon.png",
-	"lastBuiltDate": 543542107
+	"lastBuiltDate": 543584054
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2595,7 +2625,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules, \/dist, \/lib, \/sql, \/src\/xslt, \/src\/data",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules, \/dist, \/lib, \/sql, \/src\/xslt, \/src\/data, \/img",
 	"sourceFolderName": "src",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
