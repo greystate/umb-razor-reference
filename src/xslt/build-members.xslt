@@ -25,13 +25,19 @@
 	</xsl:template>
 	
 	<xsl:template match="members">
-		<h2><xsl:value-of select="@category" /></h2>
-		<div class="memberlist">
-			<xsl:for-each select="property | function[not(@name = preceding-sibling::function/@name)]">
-				<xsl:sort select="@name" data-type="text" order="ascending" />
-				<xsl:apply-templates select="." mode="group" />
-			</xsl:for-each>
-		</div>
+		<section class="category">
+			<header>
+				<h2><xsl:value-of select="@category" /></h2>
+				<xsl:apply-templates select="description" />
+			</header>
+			
+			<div class="memberlist">
+				<xsl:for-each select="property | function[not(@name = preceding-sibling::function/@name)]">
+					<xsl:sort select="@name" data-type="text" order="ascending" />
+					<xsl:apply-templates select="." mode="group" />
+				</xsl:for-each>
+			</div>
+		</section>
 	</xsl:template>
 	
 	<xsl:template match="function" mode="group">
