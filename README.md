@@ -3,6 +3,8 @@
 This is a quick reference/cheatsheet for use when writing Razor views/partials
 for [Umbraco][UMB]
 
+![Screendump of the Filter & Order category](img/category-filter-order.jpg)
+
 There's two main purposes for this:
 
 1. For use with [Dash][DASH] on macOS - it's the perfect app for all sorts of API/reference lookups, as it can use the editor's context for opening the correct bundle (Razor) and search for the "current" word.
