@@ -536,7 +536,7 @@
 		
 		<function name="ReplaceLineBreaksForHtml" type="string">
 			<description>
-				Replace linebreaks with HTML &lt;br&gt; tags.
+				Replace linebreaks with HTML <code>&lt;br&gt;</code> tags.
 			</description>
 			<argument name="text" type="string" />
 		</function>
@@ -547,6 +547,15 @@
 				This method will detect the security requirements (is FIPS enabled) and return an appropriate hash.
 			</description>
 			<argument name="text" type="string" />
+		</function>
+		
+		<function name="GetDictionaryValue" type="string">
+			<description>
+				Returns the dictionary value for the specified key.
+				You can specify an <var>altText</var> fallback value to be returned if the dictionary has no value for <var>key</var>.
+			</description>
+			<argument name="key" type="string" />
+			<argument name="altText" type="string" required="no" />
 		</function>
 
 	</members>

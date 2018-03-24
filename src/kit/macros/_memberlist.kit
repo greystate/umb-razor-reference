@@ -629,6 +629,15 @@ var widgets = Model.Children&lt;Widget&gt;().RandomOrder().FirstOrDefault();
 				Generates a hash based on the text string passed in.
 				This method will detect the security requirements (is FIPS enabled) and return an appropriate hash.
 			</p></div>
+</div></section><section class="function" id="GetDictionaryValue"><h2><a href="#GetDictionaryValue">GetDictionaryValue()</a></h2>
+<div class="details">
+<div class="usage"><div>
+<code>@Umbraco.GetDictionaryValue(string <var>key</var>, [string <var>altText</var>])</code> ⇒ <var>string</var>
+</div></div>
+<div class="description"><p>
+				Returns the dictionary value for the specified key.
+				You can specify an <var>altText</var> fallback value to be returned if the dictionary has no value for <var>key</var>.
+			</p></div>
 </div></section><section class="function" id="If"><h2><a href="#If">If()</a></h2>
 <div class="details">
 <div class="usage"><div>
@@ -651,7 +660,7 @@ var widgets = Model.Children&lt;Widget&gt;().RandomOrder().FirstOrDefault();
 <code>@Umbraco.ReplaceLineBreaksForHtml(string <var>text</var>)</code> ⇒ <var>string</var>
 </div></div>
 <div class="description"><p>
-				Replace linebreaks with HTML &lt;br&gt; tags.
+				Replace linebreaks with HTML <code>&lt;br&gt;</code> tags.
 			</p></div>
 </div></section><section class="function" id="StripHTML"><h2><a href="#StripHTML">StripHTML()</a></h2>
 <div class="details">
