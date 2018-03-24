@@ -42,3 +42,10 @@ sqlite3 "$BUNDLE/Contents/Resources/docSet.dsidx" "CREATE UNIQUE INDEX anchor ON
 # Populate the index
 sqlite3 "$BUNDLE/Contents/Resources/docSet.dsidx" ".read $TEMP_DIR/docs.sql"
 
+# Create the archived Docset file
+tar --exclude='.DS_Store' -cvzf "$DIST_DIR/$ARCHIVE_NAME.tgz" "$BUNDLE"
+
+# Clean up
+rm -rf "$BUNDLE.bak"
+
+echo "Completed build - don't forget to upload the $ARCHIVE_NAME.tgz and feed (XML) files to greystate.dk as well as all the HTML files"
