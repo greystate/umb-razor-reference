@@ -31,6 +31,12 @@
 		"oAP": "\/build\/.tm_properties",
 		"oF": 1
 		},
+	"\/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/build",
+		"oF": 0
+		},
 	"\/build.sh": {
 		"cB": 0,
 		"ft": 8192,
@@ -611,7 +617,7 @@
 	"displayValue": "umb-razor-reference",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/lib\/icon.png",
-	"lastBuiltDate": 543622389
+	"lastBuiltDate": 543652964
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
