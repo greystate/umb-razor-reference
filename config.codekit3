@@ -225,6 +225,54 @@
 		"sM": 1,
 		"sU": 0
 		},
+	"\/src\/components\/feed-link\/_feed-link.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_feed-link.html",
+		"oF": 0
+		},
+	"\/src\/components\/feed-link\/feed-link.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/feed-link.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
+	"\/src\/components\/fork-banner\/_fork-banner.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_fork-banner.html",
+		"oF": 0
+		},
+	"\/src\/components\/fork-banner\/fork-banner.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/fork-banner.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
 	"\/src\/components\/function\/_function.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -409,20 +457,6 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"\/src\/kit\/_feed-link.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/_feed-link.html",
-		"oF": 0
-		},
-	"\/src\/kit\/_fork-banner.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/_fork-banner.html",
-		"oF": 0
-		},
 	"\/src\/kit\/_toc-link.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -495,23 +529,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/assets\/doc.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 1,
-		"sU": 0
-		},
-	"\/src\/less\/forkmebanner.less": {
-		"aP": 1,
-		"bl": 1,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/forkmebanner.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -617,7 +634,7 @@
 	"displayValue": "umb-razor-reference",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/lib\/icon.png",
-	"lastBuiltDate": 543652964
+	"lastBuiltDate": 543654682
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
