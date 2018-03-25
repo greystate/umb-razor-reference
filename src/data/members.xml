@@ -485,23 +485,23 @@
 		
 		<function name="Truncate">
 			<description>
-				Truncates a string to a given length, can add an ellipsis (&#8230;) at the end.
+				Truncates a string to a given length and can add an ellipsis (&#8230;) at the end.
 				The method checks for open HTML tags, and makes sure to close them.
 			</description>
 			<argument name="html" type="string" />
 			<argument name="length" type="int" />
-			<argument name="addElipsis" type="boolean" required="no" />
+			<argument name="addEllipsis" type="boolean" required="no" />
 			<argument name="treatTagsAsContent" type="boolean" required="no" />
 		</function>
 		
 		<function name="TruncateByWords" type="html">
 			<description>
-				Truncates a string to a given amount of words, can add an ellipsis (&#8230;) at the end.
+				Truncates a string to a given amount of words and can add an ellipsis (&#8230;) at the end.
 				The method checks for open HTML tags, and makes sure to close them.
 			</description>
 			<argument name="html" type="string" />
 			<argument name="words" type="int" />
-			<argument name="addElipsis" type="boolean" required="no" />
+			<argument name="addEllipsis" type="boolean" required="no" />
 		</function>
 		
 		<function name="Coalesce" type="string">
@@ -528,15 +528,16 @@
 		
 		<function name="StripHTML" type="html">
 			<description>
-				Strips all HTML tags from a given string, all contents of the tags will remain.
+				Strips HTML tags from a given string, leaving the contents of the tags in place.
+				If no <var>tag</var>s are specified, all HTML tags are stripped.
 			</description>
 			<argument name="html" type="string" />
-			<argument name="tags" type="params" required="no" />
+			<argument name="tag" type="params" required="no" />
 		</function>
 		
 		<function name="ReplaceLineBreaksForHtml" type="string">
 			<description>
-				Replace linebreaks with HTML <code>&lt;br&gt;</code> tags.
+				Replace linebreaks with HTML <code>&lt;br /&gt;</code> tags.
 			</description>
 			<argument name="text" type="string" />
 		</function>
