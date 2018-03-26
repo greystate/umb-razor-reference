@@ -21,6 +21,7 @@
 				<xsl:value-of select="concat(' &#8212; v', docset/@version)" />
 			</title>
 			<link rel="stylesheet" href="app.css" />
+			<link rel="stylesheet" href="https://use.typekit.net/vax3dgg.css" />
 			<script src="app.min.js"></script>
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<xsl:comment>
