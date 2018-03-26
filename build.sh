@@ -7,7 +7,7 @@ DIST_DIR="dist"
 BUNDLE="$DIST_DIR/$DOCSET_NAME.docset"
 
 # Build the resulting file
-xsltproc --xinclude -o "$TEMP_DIR/index.html" src/xslt/build-dash-docset.xslt "$DOC_XML_FILE"
+xsltproc --xinclude -o "$DIST_DIR/index.html" src/xslt/build-dash-docset.xslt "$DOC_XML_FILE"
 
 # Build the SQL to populate the docSet.dsidx SQLLite database
 xsltproc --xinclude -o "$TEMP_DIR/docs.sql" src/xslt/build-sql.xslt "$DOC_XML_FILE"
@@ -24,10 +24,14 @@ fi
 # Create the Docset Folder
 mkdir -p "$BUNDLE/Contents/Resources/Documents/"
 
-# Copy HTML + assets
-cp $TEMP_DIR/index.html "$BUNDLE/Contents/Resources/Documents"
+# Copy HTML + assets to Docset
+cp $DIST_DIR/index.html "$BUNDLE/Contents/Resources/Documents"
 cp build/assets/app.css "$BUNDLE/Contents/Resources/Documents"
 cp build/assets/app.min.js "$BUNDLE/Contents/Resources/Documents"
+
+# Copy assets to dist as well for easier transfer to deploy server
+cp build/assets/app.css $DIST_DIR
+cp build/assets/app.min.js $DIST_DIR
 
 # Copy the Info.plist file
 cp "lib/Info.plist" "$BUNDLE/Contents"
