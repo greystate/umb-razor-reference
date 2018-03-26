@@ -262,7 +262,7 @@
 			<argument name="nodeTypeAlias" type="string" />
 		</function>
 		
-		<function name="Sibling" type="node">
+		<function name="Sibling" type="node" obsolete="yes">
 			<description/>
 			<argument name="number" type="integer" />
 			<note type="warning">
@@ -273,7 +273,7 @@
 			<description/>
 			<argument name="nodeTypeAlias" type="string" />
 		</function>
-		<function name="Up" type="node">
+		<function name="Up" type="node" obsolete="yes">
 			<description/>
 			<note type="warning">
 				Obsolete - use <ref>Ancestors</ref> instead.
@@ -283,7 +283,7 @@
 			<description/>
 			<argument name="number" type="integer" />
 		</function>
-		<function name="Down" type="node">
+		<function name="Down" type="node" obsolete="yes">
 			<description/>
 			<note type="warning">
 				Obsolete - use <ref>Descendants</ref> instead.
@@ -293,7 +293,7 @@
 			<description/>
 			<argument name="number" type="integer" />
 		</function>
-		<function name="Next" type="node">
+		<function name="Next" type="node" obsolete="yes">
 			<description/>
 			<note type="warning">
 				Obsolete - use <ref>FollowingSibling</ref> instead.
@@ -303,7 +303,7 @@
 			<description/>
 			<argument name="number" type="integer" />
 		</function>
-		<function name="Previous" type="node">
+		<function name="Previous" type="node" obsolete="yes">
 			<description/>
 			<note type="warning">
 				Obsolete - use <ref>PrecedingSibling</ref> instead.
