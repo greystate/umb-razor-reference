@@ -31,6 +31,15 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		<body id="toc">
 			
 			<main id="ref">
+				<header class="masthead">
+					<h1><xsl:value-of select="docset/name" /></h1>
+					<div class="description">
+						<xsl:apply-templates select="docset/description" mode="copy" />
+						
+						<xsl:call-template name="feed-link" />
+					</div>
+				</header>
+				
 				<xsl:apply-templates select="docset/members" />
 			</main>
 			
