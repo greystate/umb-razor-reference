@@ -284,6 +284,13 @@
 		"sM": 1,
 		"sU": 0
 		},
+	"\/src\/components\/function\/_function-obsolete.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_function-obsolete.html",
+		"oF": 0
+		},
 	"\/src\/components\/function\/_function.kit": {
 		"cB": 0,
 		"ft": 2048,
