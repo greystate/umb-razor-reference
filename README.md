@@ -18,15 +18,16 @@ Feel free to use the [issue tracker][ISSUES] or perhaps even fork the repo and s
 
 ## DEV Notes
 
-I use [CodeKit][CK] for preprocessing the LESS file (enabling autoprefixer), and a bash script to transform the XML file with the list of methods into a single HTML file. Yay, XSLT!
+### Tools
 
-The codesamples are all in a separate XML file, so contributing a small code sample for a property or function should be super easy. (Just imagine if that was a JSON file and you had to escape all the double quotes... *crickets* ... :-)
+I use [CodeKit][CK] for preprocessing LESS and [Kit][KIT] files, and a bash script to transform the XML file with the list of methods into a single HTML file. Yay, XSLT!
 
-## TODO
+### Data
 
-- [x] Write the build script
-- [x] Test the Dash docset
-- [x] Publish somewhere on greystate.dk
+The data for this has been (and continues to be) collected from various sources - mainly from the [v6 Strong Cheatsheet][CHEAT] PDF, but also from the Umbraco
+source code and docs. It's a single XML file in the src/data folder.
+
+The codesamples are also in a separate XML file, so contributing a small code sample for a property or function should be super easy. (Just imagine if that was a JSON file and you had to escape all the double quotes... *crickets* ... :-)
 
 
 *Chriztian Steinmeier, 2018*
@@ -35,6 +36,9 @@ The codesamples are all in a separate XML file, so contributing a small code sam
 [UMB]: https://umbraco.com/
 [UMBRAZREF]: http://greystate.dk/resources/umbraco/razor-reference/
 [CK]: https://codekitapp.com/
+[KIT]: https://codekitapp.com/help/kit/
 [ISSUES]: https://github.com/greystate/umb-razor-reference/issues
 [LEA]: https://github.com/LeaVerou/
 [PRISM]: http://prismjs.com/
+[CHEAT]: https://our.umbraco.org/projects/developer-tools/umbraco-v6-mvc-razor-cheatsheets/
+
