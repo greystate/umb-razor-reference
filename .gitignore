@@ -8,3 +8,5 @@ dist/temp
 extensions.xml
 
 src/kit/macros/_memberlist.kit
+
+dist/Umbraco_Razor_Quick_Reference.tgz
