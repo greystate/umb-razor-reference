@@ -98,6 +98,17 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/src\/assets\/forkme_right_orange_ff7600.png": {
+		"ft": 32768,
+		"iS": 9267,
+		"oA": 0,
+		"oAP": "\/build\/assets\/forkme_right_orange_ff7600.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/src\/components\/_all.kit": {
 		"cB": 0,
 		"ft": 2048,
