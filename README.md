@@ -3,7 +3,7 @@
 This is a quick reference/cheatsheet for use when writing Razor views/partials
 for [Umbraco][UMB]
 
-![Screendump of the Filter & Order category](img/category-filter-order.jpg)
+<img src="img/category-filter-order.jpg" width="600" alt="Screendump of the Filter &amp; Order category">
 
 There's two main purposes for this:
 
