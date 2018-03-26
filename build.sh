@@ -28,10 +28,12 @@ mkdir -p "$BUNDLE/Contents/Resources/Documents/"
 cp $DIST_DIR/index.html "$BUNDLE/Contents/Resources/Documents"
 cp build/assets/app.css "$BUNDLE/Contents/Resources/Documents"
 cp build/assets/app.min.js "$BUNDLE/Contents/Resources/Documents"
+cp build/assets/*.png "$BUNDLE/Contents/Resources/Documents"
 
 # Copy assets to dist as well for easier transfer to deploy server
 cp build/assets/app.css $DIST_DIR
 cp build/assets/app.min.js $DIST_DIR
+cp build/assets/*.png $DIST_DIR
 
 # Copy the Info.plist file
 cp "lib/Info.plist" "$BUNDLE/Contents"
