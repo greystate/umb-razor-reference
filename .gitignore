@@ -6,3 +6,5 @@ config.codekit
 
 dist/temp
 extensions.xml
+
+src/kit/macros/_memberlist.kit
