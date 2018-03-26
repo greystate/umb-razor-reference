@@ -53,7 +53,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 	<xsl:template name="fork-banner">
 		<a href="https://github.com/greystate/umb-razor-reference#readme">
 			<img class="forkme"
-				src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+				src="/assets/forkme_right_orange_ff7600.png"
 				alt="Fork me on GitHub"
 			/>
 		</a>
