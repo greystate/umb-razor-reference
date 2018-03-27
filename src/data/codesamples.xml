@@ -37,4 +37,16 @@ var siteRoot = Model.AncestorOrSelf(1);
 var widgets = Model.Children<Widget>().RandomOrder().FirstOrDefault();
 ]]></example>
 	
+	<example for="GetCulture"><![CDATA[
+@{
+	var siteRoot = Model.Site();
+}
+<html lang="@siteRoot.GetCulture()">
+...
+</html>
+]]></example>
+
+	<example for="Where"><![CDATA[
+var breaking = Model.Children<NewsItem>().Where(x => x.Category == "breaking");
+]]></example>
 </codesamples>
