@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
 	<members category="IPublishedContent">
-		<property name="Parent">
+		<description>
+			These are all the "native" node properties
+		</description>
+		<property name="Parent" type="node">
 			<description>A reference to the node's parent</description>
 		</property>
 		<property name="Id" type="integer">
@@ -116,7 +119,7 @@
 
 		<function name="GetPropertyValue&lt;T&gt;" type="T">
 			<description>
-				Returns the value of the specified property as the type <var>T</var>.
+				Returns the value of the specified property as the type <strong>T</strong>.
 			</description>
 			<argument name="propertyAlias" type="string" />
 		</function>
@@ -145,14 +148,35 @@
 	</members>
 	
 	<members category="Collections">
-		<property name="Children">
-			<description/>
+		<property name="Children" id="ChildrenProperty" type="collection">
+			<description>
+				Gets the children of the node, sorted by their <ref>SortOrder</ref>.
+			</description>
 		</property>
+		
+		<function name="Children" type="collection">
+			<description>
+				Gets the children of the node, sorted by their <ref>SortOrder</ref>.
+			</description>
+			<note>
+				Using this with no arguments is the same as using the <ref id="ChildrenProperty">Children</ref> property. Just included for consistency.
+			</note>
+		</function>
+		
+		<function name="Children" type="collection">
+			<argument name="predicate" type="lambda" />
+		</function>
+		
+		<function name="Children" type="collection">
+			<argument name="alias" type="params" />
+		</function>
+		
 		<function name="Children&lt;T&gt;" type="collection">
 			<description>
-				Returns a collection of the children of type <strong>T</strong>.
+				Returns the children of the specific type <strong>T</strong>.
 			</description>
 		</function>
+		
 		<property name="ChildrenAsList">
 			<description/>
 		</property>
@@ -210,6 +234,13 @@
 		</description>
 		
 		<property ref="Parent"/>
+		
+		<function name="Parent&lt;T&gt;" type="T">
+			<description>
+				Returns the parent if it has the specific type <strong>T</strong>, otherwise <code>null</code>.
+			</description>
+		</function>
+		
 		<function name="AncestorOrSelf" type="node">
 		</function>
 		<function name="AncestorOrSelf" type="node">
@@ -226,8 +257,18 @@
 		</function>
 		<function name="FirstChild">
 			<description></description>
-			<argument name="alias" type="string" />
+			<argument name="alias" type="string" required="no" />
 		</function>
+		<function name="FirstChild">
+			<description></description>
+			<argument name="predicate" type="lambda" />
+		</function>
+
+		<function name="FirstChild&lt;T&gt;">
+			<description></description>
+			<argument name="func" type="lambda" required="no" />
+		</function>
+		
 		<function name="FirstOrDefault" type="node">
 			<description/>
 		</function>
@@ -262,7 +303,7 @@
 			<argument name="nodeTypeAlias" type="string" />
 		</function>
 		
-		<function name="Sibling" type="node">
+		<function name="Sibling" type="node" obsolete="yes">
 			<description/>
 			<argument name="number" type="integer" />
 			<note type="warning">
@@ -273,7 +314,7 @@
 			<description/>
 			<argument name="nodeTypeAlias" type="string" />
 		</function>
-		<function name="Up" type="node">
+		<function name="Up" type="node" obsolete="yes">
 			<description/>
 			<note type="warning">
 				Obsolete - use <ref>Ancestors</ref> instead.
@@ -283,7 +324,7 @@
 			<description/>
 			<argument name="number" type="integer" />
 		</function>
-		<function name="Down" type="node">
+		<function name="Down" type="node" obsolete="yes">
 			<description/>
 			<note type="warning">
 				Obsolete - use <ref>Descendants</ref> instead.
@@ -293,7 +334,7 @@
 			<description/>
 			<argument name="number" type="integer" />
 		</function>
-		<function name="Next" type="node">
+		<function name="Next" type="node" obsolete="yes">
 			<description/>
 			<note type="warning">
 				Obsolete - use <ref>FollowingSibling</ref> instead.
@@ -303,7 +344,7 @@
 			<description/>
 			<argument name="number" type="integer" />
 		</function>
-		<function name="Previous" type="node">
+		<function name="Previous" type="node" obsolete="yes">
 			<description/>
 			<note type="warning">
 				Obsolete - use <ref>PrecedingSibling</ref> instead.
@@ -365,7 +406,7 @@
 		
 		<function name="GetCulture" type="System.Globalization.CultureInfo">
 			<description>
-				Gets the culture that would be selected to render a specified content,
+				Gets the culture that would be used to render the content,
 				within the context of a specified current request.
 			</description>
 			<argument name="current" type="uri" required="no" />
@@ -380,7 +421,8 @@
 		
 		<function name="Where" type="collection">
 			<description>
-				
+				Provides a way to filter a collection of nodes, by using a lambda function that
+				returns `true` if the node should be included and `false` if not.
 			</description>
 			<argument name="func" type="lambda" />
 		</function>
