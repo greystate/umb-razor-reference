@@ -47,6 +47,7 @@
 		<xsl:variable name="overloads" select="key('functionsIndex', @name)" />
 		
 		<section xsl:use-attribute-sets="member-ids">
+			<xsl:copy-of select="@id" />
 			<h2>
 				<xsl:apply-templates select="@name" mode="link" />
 			</h2>
@@ -92,6 +93,7 @@
 	<xsl:template match="property" mode="group">
 		<xsl:param name="referenced" select="false()" />
 		<section xsl:use-attribute-sets="member-ids">
+			<xsl:copy-of select="@id" />
 			<h2>
 				<xsl:if test="$referenced"><xsl:attribute name="class">is-ref</xsl:attribute></xsl:if>
 				<xsl:apply-templates select="@name" mode="link" />
@@ -167,6 +169,7 @@
 	
 	<xsl:template match="@name" mode="link">
 		<a href="#{.}">
+			<xsl:if test="../@id"><xsl:attribute name="href"><xsl:value-of select="concat('#', ../@id)" /></xsl:attribute></xsl:if>
 			<xsl:value-of select="." />
 			<xsl:if test="parent::function">()</xsl:if>
 		</a>
@@ -190,9 +193,13 @@
 	</xsl:template>
 	
 	<xsl:template match="ref" mode="copy">
-		<a class="ref" href="#{.}">
+		<xsl:variable name="id">
+			<xsl:if test="@id"><xsl:value-of select="@id" /></xsl:if>
+			<xsl:if test="not(@id)"><xsl:value-of select="." /></xsl:if>
+		</xsl:variable>
+		<a class="ref" href="#{$id}">
 			<xsl:value-of select="." />
-			<xsl:if test="key('functionsIndex', .)">()</xsl:if>
+			<xsl:if test="key('functionsIndex', $id)">()</xsl:if>
 		</a>
 	</xsl:template>
 	
