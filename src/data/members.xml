@@ -422,7 +422,7 @@
 		<function name="Where" type="collection">
 			<description>
 				Provides a way to filter a collection of nodes, by using a lambda function that
-				returns `true` if the node should be included and `false` if not.
+				returns <code>true</code> if the node should be included and <code>false</code> if not.
 			</description>
 			<argument name="func" type="lambda" />
 		</function>
