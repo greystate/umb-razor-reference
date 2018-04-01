@@ -9,6 +9,9 @@ BUNDLE="$DIST_DIR/$DOCSET_NAME.docset"
 # Build the resulting file
 xsltproc --xinclude -o "$DIST_DIR/index.html" src/xslt/build-dash-docset.xslt "$DOC_XML_FILE"
 
+# Build the markdown file
+xsltproc --xinclude -o "$DIST_DIR/index.md" src/xslt/export-markdown.xslt "$DOC_XML_FILE"
+
 # Build the SQL to populate the docSet.dsidx SQLLite database
 xsltproc --xinclude -o "$TEMP_DIR/docs.sql" src/xslt/build-sql.xslt "$DOC_XML_FILE"
 
