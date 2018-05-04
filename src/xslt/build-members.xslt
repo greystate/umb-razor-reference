@@ -50,6 +50,7 @@
 			<xsl:copy-of select="@id" />
 			<h2>
 				<xsl:apply-templates select="@name" mode="link" />
+				<xsl:apply-templates select="self::*[@minVersion or @maxVersion]" mode="version" />
 			</h2>
 			
 			<div class="details">
@@ -97,6 +98,7 @@
 			<h2>
 				<xsl:if test="$referenced"><xsl:attribute name="class">is-ref</xsl:attribute></xsl:if>
 				<xsl:apply-templates select="@name" mode="link" />
+				<xsl:apply-templates select="self::*[@minVersion or @maxVersion]" mode="version" />
 			</h2>
 			
 			<div class="details">
@@ -126,6 +128,26 @@
 		<xsl:apply-templates select="key('membersIndex', @ref)[1]" mode="group">
 			<xsl:with-param name="referenced" select="true()" />
 		</xsl:apply-templates>
+	</xsl:template>
+	
+	<xsl:template match="property | function" mode="version">
+		<data class="version-badge">
+			<xsl:choose>
+				<xsl:when test="@minVersion and @maxVersion">
+					<xsl:attribute name="value"><xsl:value-of select="concat(@minVersion, '&#8212;', @maxVersion)" /></xsl:attribute>
+					<xsl:value-of select="concat('v', @minVersion, '&#8212;v', @maxVersion)" />
+				</xsl:when>
+				<xsl:when test="@minVersion">
+					<xsl:attribute name="value"><xsl:value-of select="@minVersion" /></xsl:attribute>
+					<!-- Tag content -->
+					<xsl:value-of select="concat('v', @minVersion, '+')" />
+				</xsl:when>
+				<xsl:when test="@maxVersion">
+					<xsl:attribute name="value"><xsl:value-of select="@maxVersion" /></xsl:attribute>
+					<xsl:value-of select="concat('v', @maxVersion)" />
+				</xsl:when>
+			</xsl:choose>
+		</data>
 	</xsl:template>
 	
 	<xsl:template match="argument">
