@@ -404,7 +404,7 @@
 			<note>In v8 this will be renamed to <code>.Root()</code></note>
 		</function>
 		
-		<function name="GetCulture" type="System.Globalization.CultureInfo" minVersion="7.10.4">
+		<function name="GetCulture" type="System.Globalization.CultureInfo" minVersion="7.2.7">
 			<description>
 				Gets the culture that would be used to render the content,
 				within the context of a specified current request.
