@@ -478,7 +478,7 @@
 			</description>
 		</function>
 
-		<function name="InGroupsOf" type="collection">
+		<function name="InGroupsOf" type="collection" minVersion="7.2.1">
 			<description></description>
 			<argument name="number" type="int" />
 		</function>
