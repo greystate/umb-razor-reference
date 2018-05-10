@@ -15,7 +15,7 @@
 		"uuidString": "D57FB568-E300-4FE1-90D4-74BFD26D998D"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -483,6 +483,30 @@
 		"sM": 1,
 		"sU": 0
 		},
+	"\/src\/components\/version\/_badge.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/_badge.html",
+		"oF": 0
+		},
+	"\/src\/components\/version\/badge.less": {
+		"aP": 1,
+		"bl": 1,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/badge.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 1,
+		"sU": 0
+		},
 	"\/src\/data": {
 		"ft": 65536,
 		"oA": 1,
@@ -693,7 +717,8 @@
 	"displayValue": "umb-razor-reference",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/lib\/icon.png",
-	"lastBuiltDate": 543844726
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 547656039
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2496,6 +2521,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
