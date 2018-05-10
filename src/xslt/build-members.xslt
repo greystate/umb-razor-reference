@@ -13,6 +13,7 @@
 		<xsl:attribute name="class">
 			<xsl:if test="@obsolete = 'yes'">obsolete </xsl:if>
 			<xsl:value-of select="name()" />
+			<xsl:if test="$samples[@for = current()/@name]"> has-example</xsl:if>
 		</xsl:attribute>
 		<xsl:attribute name="id"><xsl:value-of select="@name" /></xsl:attribute>
 	</xsl:attribute-set>
