@@ -60,7 +60,7 @@
 	</xsl:template>
 	
 	<xsl:template match="@name" mode="markdown">
-<xsl:value-of select="concat('### ', .)" />
+<xsl:value-of select="concat('### .', .)" />
 <xsl:if test="parent::function">
 <xsl:text>(</xsl:text>
 	<xsl:for-each select="../argument">
