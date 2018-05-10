@@ -28,9 +28,9 @@ var siteRoot = Model.AncestorOrSelf(1);
 ]]></example>
 
 	<example for="IsVisible"><![CDATA[
-@foreach (var item in Model.Children.Where(x => x.IsVisible()) {
+@foreach (var item in Model.Children.Where(x => x.IsVisible())) {
 	...
-})]]></example>
+}]]></example>
 
 	<example for="RandomOrder"><![CDATA[
 // Pick a random widget to display
