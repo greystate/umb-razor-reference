@@ -54,5 +54,13 @@ var breaking = Model.Children<NewsItem>().Where(x => x.Category == "breaking");
 <a href="#top">@Umbraco.GetDictionaryValue("TopLabel")</a>
 ]]></example>
 
+<example for="GetPropertyValue"><![CDATA[
+<title>@Model.GetPropertyValue("pageTitle", Model.Name)</title>
+]]></example>
+
+<example for="GetPropertyValue&lt;T&gt;"><![CDATA[
+var picker = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("panels");
+]]></example>
+
 	
 </codesamples>
