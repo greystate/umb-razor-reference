@@ -404,7 +404,7 @@
 			<note>In v8 this will be renamed to <code>.Root()</code></note>
 		</function>
 		
-		<function name="GetCulture" type="System.Globalization.CultureInfo">
+		<function name="GetCulture" type="System.Globalization.CultureInfo" minVersion="7.2.7">
 			<description>
 				Gets the culture that would be used to render the content,
 				within the context of a specified current request.
@@ -478,7 +478,7 @@
 			</description>
 		</function>
 
-		<function name="InGroupsOf" type="collection">
+		<function name="InGroupsOf" type="collection" minVersion="7.2.1">
 			<description></description>
 			<argument name="number" type="int" />
 		</function>
