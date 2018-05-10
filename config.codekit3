@@ -15,7 +15,7 @@
 		"uuidString": "D57FB568-E300-4FE1-90D4-74BFD26D998D"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -693,7 +693,8 @@
 	"displayValue": "umb-razor-reference",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/lib\/icon.png",
-	"lastBuiltDate": 543844726
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 547658263
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2496,6 +2497,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
