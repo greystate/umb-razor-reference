@@ -62,5 +62,8 @@ var breaking = Model.Children<NewsItem>().Where(x => x.Category == "breaking");
 var picker = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("panels");
 ]]></example>
 
-	
+<example for="ToUrlSegment"><![CDATA[
+<h2 id="@Model.MetaPageTitle.ToUrlSegment()">@Model.MetaPageTitle</h2>
+]]></example>
+
 </codesamples>
