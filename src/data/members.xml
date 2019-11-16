@@ -227,6 +227,155 @@
 		</function>
 	</members>
 	
+	<members category="IsHelpers">
+		<description>
+			The <code>IsHelper</code> methods are a set of extension methods for <code>IPublishedContent</code>
+			to help perform quick conditional queries against <code>IPublishedContent</code>
+			nodes in a collection.
+			They can all return a simple <code>boolean</code>, or one of two supplied strings, depending
+			on the result of the comparison. Leaving the <code>valueIfFalse</code> argument out is equivalent to
+			supplying an empty string, which is what will be returned if the condition evaluates to <code>false</code>.
+		</description>
+		
+		<function name="IsFirst" type="boolean">
+			<description>Test if the current node is first in the collection.</description>
+		</function>
+		<function name="IsFirst" type="string">
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+
+		<function name="IsNotFirst" type="boolean">
+			<description>Test if the current node is not the first in the collection</description>
+		</function>
+		<function name="IsNotFirst" type="string">
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsLast" type="boolean">
+			<description>Test if the current node is last in the collection</description>
+		</function>
+		<function name="IsLast" type="string">
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsNotLast" type="boolean">
+			<description>Test if the current node is not the last item in the collection</description>
+		</function>
+		<function name="IsNotLast" type="string">
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsPosition" type="boolean">
+			<argument name="index" type="integer" />
+			<description>Test if the current node is at the specified <code>index</code> in the collection</description>
+		</function>
+		<function name="IsPosition" type="string">
+			<argument name="index" type="integer" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsNotPosition">
+			<argument name="index" type="integer" />
+			<description>Test if the current node is not at the specified <code>index</code> in the collection</description>
+		</function>
+		<function name="IsNotPosition">
+			<argument name="index" type="integer" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsModZero" type="boolean">
+			<argument name="modulus" type="integer" />
+			<description>Test if the current node's position is evenly divisible by a given number</description>
+		</function>
+		<function name="IsModZero" type="string">
+			<argument name="modulus" type="integer" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsNotModZero" type="boolean">
+			<argument name="modulus" type="integer" />
+			<description>Test if the current node's position is not evenly divisible by a given number</description>
+		</function>
+		<function name="IsNotModZero" type="string">
+			<argument name="modulus" type="integer" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsEven" type="boolean">
+			<description>Test if the current node's position is even</description>
+		</function>
+		<function name="IsEven" type="string">
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsOdd" type="boolean">
+			<description>Test if the current node's position is odd</description>
+		</function>
+		<function name="IsOdd" type="string">
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsEqual" type="boolean">
+			<argument name="otherNode" type="node" />
+			<description>Test if the current node in the iteration is equal (by Id) to another node</description>
+		</function>
+		<function name="IsEqual" type="string">
+			<argument name="otherNode" type="node" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+
+		<function name="IsDescendant" type="boolean">
+			<argument name="otherNode" type="node" />
+			<description>Test if the current node in the iteration is a descendant of another node</description>
+		</function>
+		<function name="IsDescendant" type="string">
+			<argument name="otherNode" type="node" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+
+		<function name="IsDescendantOrSelf" type="boolean">
+			<argument name="otherNode" type="node" />
+			<description>Test if the current node in the iteration is the same as, or a descendant of, another node</description>
+		</function>
+		<function name="IsDescendantOrSelf" type="string">
+			<argument name="otherNode" type="node" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+
+		<function name="IsAncestor" type="boolean">
+			<argument name="otherNode" type="node" />
+			<description>Test if the current node in the iteration is an ancestor of another node</description>
+		</function>
+		<function name="IsAncestor" type="string">
+			<argument name="otherNode" type="node" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+		
+		<function name="IsAncestorOrSelf" type="boolean">
+			<argument name="otherNode" type="node" />
+			<description>Test if the current node in the iteration is the same as, or an ancestor of, another node</description>
+		</function>
+		<function name="IsAncestorOrSelf" type="string">
+			<argument name="otherNode" type="node" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+	</members>
+	
 	<members category="Traversing">
 		<description>
 			These are used for walking up/down the tree from any other node you might be on.
@@ -381,7 +530,7 @@
 		</function>
 
 		<function name="IsNull" type="boolean">
-			<description>Returns a boolean value representing if the IPublishedContent property is Null.</description>
+			<description>Returns a boolean value representing if the <code>IPublishedContent</code> property is Null.</description>
 			<argument name="propertyAlias" type="string" />
 		</function>
 
@@ -600,6 +749,6 @@
 			<argument name="key" type="string" />
 			<argument name="altText" type="string" required="no" />
 		</function>
-
+		
 	</members>
 </root>
