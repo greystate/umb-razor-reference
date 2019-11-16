@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<members category="String Helpers">
+	<members category="String Extensions">
 		<description>
 			These are all available on string objects.
 		</description>
+		
 		<function name="ToUrlSegment" type="string">
 			<description>
 				Returns a string that can be used as a segment of a URL.
 			</description>
 		</function>
+		
+		<function name="EnsureStartsWith">
+			<description>
+				Use this to make sure a string starts with a specific substring or character.
+			</description>
+			<argument name="toStartWith" type="string" />
+		</function>
+		<function name="EnsureStartsWith">
+			<argument name="toStartWith" type="char" />
+		</function>
+		
+		<function name="EnsureEndsWith">
+			<description>
+				Use this to make sure a string ends with a specific substring or character.
+			</description>
+			<argument name="toEndWith" type="string" />
+		</function>
+		<function name="EnsureEndsWith">
+			<argument name="toEndWith" type="char" />
+		</function>
+		
 	</members>
 </root>
