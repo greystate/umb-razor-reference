@@ -749,6 +749,8 @@
 			<argument name="key" type="string" />
 			<argument name="altText" type="string" required="no" />
 		</function>
-		
+
 	</members>
+
+	<include href="string-helpers.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 </root>
