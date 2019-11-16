@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<members category="Filter &amp; Order">
+		<description>
+			When collecting nodes for a navigation or a listview, these come in very handy.
+			They all work on and return a collection, so can can be chained for very effective results.
+		</description>
+		
+		<function name="Where" type="collection">
+			<description>
+				Provides a way to filter a collection of nodes, by using a lambda function that
+				returns <code>true</code> if the node should be included and <code>false</code> if not.
+			</description>
+			<argument name="func" type="lambda" />
+		</function>
+		
+		<function name="OrderBy" type="collection">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+		
+		<function name="OrderByDescending" type="collection">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+		
+		<!-- .Union(IEnumerable<IPublishedContent>[,IEQualityComparer]) -->
+		<!-- .Intersect(IEnumerable<IPublishedContent>[,IEQualityComparer]) -->
+		<!-- .Except(IEnumerable<IPublishedContent>[,IEQualityComparer]) -->
+		<!-- .Distinct([IEqualityComparer]) -->
+		<function name="DistinctBy" type="collection">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+
+		<function name="GroupBy" type="collection">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+
+		<function name="TakeWhile" type="collection">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+
+		<function name="SkipWhile" type="collection">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+
+		<function name="Take" type="collection">
+			<description></description>
+			<argument name="number" type="int" />
+		</function>
+
+		<function name="Skip" type="collection">
+			<description></description>
+			<argument name="number" type="int" />
+		</function>
+
+		<function name="RandomOrder" type="collection">
+			<description>
+				Randomizes a collection's items. Combine with <ref>Take</ref> or <ref>FirstOrDefault</ref> to get a random piece
+				of content to display somewhere.
+			</description>
+		</function>
+
+		<function name="InGroupsOf" type="collection" minVersion="7.2.1">
+			<description></description>
+			<argument name="number" type="int" />
+		</function>
+		
+	</members>
+	
+</root>

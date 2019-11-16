@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<members category="Traversing">
+		<description>
+			These are used for walking up/down the tree from any other node you might be on.
+			They all return a single <code>IPublishedContent</code> node.
+		</description>
+		
+		<property ref="Parent"/>
+		
+		<function name="Parent&lt;T&gt;" type="T">
+			<description>
+				Returns the parent if it has the specific type <strong>T</strong>, otherwise <code>null</code>.
+			</description>
+		</function>
+		
+		<function name="AncestorOrSelf" type="node">
+		</function>
+		<function name="AncestorOrSelf" type="node">
+			 <argument name="level" type="int" />
+		</function>
+		<function name="AncestorOrSelf" type="node">
+			 <argument name="nodeTypeAlias" type="string" />
+		</function>
+		<function name="AncestorOrSelf" type="node">
+			<argument name="func" type="lambda" />
+		</function>
+		<function name="First" type="node">
+			<description/>
+		</function>
+		<function name="FirstChild">
+			<description></description>
+			<argument name="alias" type="string" required="no" />
+		</function>
+		<function name="FirstChild">
+			<description></description>
+			<argument name="predicate" type="lambda" />
+		</function>
+
+		<function name="FirstChild&lt;T&gt;">
+			<description></description>
+			<argument name="func" type="lambda" required="no" />
+		</function>
+		
+		<function name="FirstOrDefault" type="node">
+			<description/>
+		</function>
+		<function name="Last" type="node">
+			<description/>
+		</function>
+		<function name="LastOrDefault" type="node">
+			<description/>
+		</function>
+		<function name="Single" type="node">
+			<description/>
+		</function>
+		<function name="SingleOrDefault" type="node">
+			<description/>
+		</function>
+
+		<function name="FollowingSibling" type="node">
+		</function>
+		<function name="FollowingSibling" type="node">
+			<argument name="number" type="int" />
+		</function>
+		<function name="FollowingSibling" type="node">
+			<argument name="nodeTypeAlias" type="string" />
+		</function>
+			
+		<function name="PrecedingSibling" type="node">
+		</function>
+		<function name="PrecedingSibling" type="node">
+			<argument name="number" type="int" />
+		</function>
+		<function name="PrecedingSibling" type="node">
+			<argument name="nodeTypeAlias" type="string" />
+		</function>
+		
+		<function name="Sibling" type="node" obsolete="yes">
+			<description/>
+			<argument name="number" type="integer" />
+			<note type="warning">
+				Obsolete - use <ref>FollowingSibling</ref> or <ref>PrecedingSibling</ref> instead.
+			</note>
+		</function>
+		<function name="Sibling" type="node">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" />
+		</function>
+		<function name="Up" type="node" obsolete="yes">
+			<description/>
+			<note type="warning">
+				Obsolete - use <ref>Ancestors</ref> instead.
+			</note>
+		</function>
+		<function name="Up" type="node">
+			<description/>
+			<argument name="number" type="integer" />
+		</function>
+		<function name="Down" type="node" obsolete="yes">
+			<description/>
+			<note type="warning">
+				Obsolete - use <ref>Descendants</ref> instead.
+			</note>
+		</function>
+		<function name="Down" type="node">
+			<description/>
+			<argument name="number" type="integer" />
+		</function>
+		<function name="Next" type="node" obsolete="yes">
+			<description/>
+			<note type="warning">
+				Obsolete - use <ref>FollowingSibling</ref> instead.
+			</note>
+		</function>
+		<function name="Next" type="node">
+			<description/>
+			<argument name="number" type="integer" />
+		</function>
+		<function name="Previous" type="node" obsolete="yes">
+			<description/>
+			<note type="warning">
+				Obsolete - use <ref>PrecedingSibling</ref> instead.
+			</note>
+		</function>
+		<function name="Previous" type="node">
+			<description>
+			</description>
+			<argument name="number" type="integer" />
+		</function>
+	</members>
+	
+</root>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+	<members category="IPublishedContent">
+		<description>
+			These are all the "native" node properties
+		</description>
+		<property name="Parent" type="node">
+			<description>A reference to the node's parent</description>
+		</property>
+		<property name="Id" type="integer">
+			<description>The id of the node in Umbraco</description>
+		</property>
+		<property name="TemplateId" type="integer">
+			<description>
+				If a template has been assigned, its id is returned here.
+			</description>
+		</property>
+		<property name="SortOrder" type="integer">
+			<description/>
+		</property>
+		<property name="Name" type="string">
+			<description/>
+		</property>
+		<property name="Url" type="string">
+			<description>
+				The absolute URL (e.g. <code>/my/page/about-url/</code>) of the content item. Whenever you need to link to a page,
+				this is what you should use.
+			</description>
+			<note>
+				If the config setting <code>&lt;useDomainPrefixes&gt;</code> in umbracoSetting.config is <code>true</code>,
+				this will return a full URL with protocol, hostname &amp; port etc.
+			</note>
+		</property>
+		<property name="UrlName" type="string">
+			<description>
+				<p>
+					A URL-safe version of the node's name, e.g. for a document named <strong>About Us</strong>
+					the UrlName property would be generated as <var>about-us</var>.
+				</p>
+				<p>Also good for anchor links to various sections on a page (see code example)</p>
+			</description>
+		</property>
+		<property name="DocumentTypeAlias" type="string">
+			<description>
+				Returns the alias of the Document Type used by this content item.
+			</description>
+		</property>
+		<property name="WriterName" type="string">
+			<description/>
+		</property>
+		<property name="CreatorName" type="string">
+			<description/>
+		</property>
+		<property name="WriterID" type="integer">
+			<description/>
+		</property>
+		<property name="CreatorID" type="integer">
+			<description/>
+		</property>
+		<property name="Path" type="string">
+			<description>
+				A CSV string of the ids of the nodes in the ancestor axis, e.g.: <var>"-1,1060,2590"</var>
+			</description>
+		</property>
+		<property name="CreateDate" type="datetime">
+			<description/>
+		</property>
+		<property name="UpdateDate" type="datetime">
+			<description/>
+		</property>
+		<property name="Level" type="integer">
+			<description/>
+		</property>
+		<function name="GetTemplateAlias" type="string">
+			<description>
+				The alias of the assigned template (if any).
+			</description>
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="defaultValue" type="string" />
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="defaultValue" type="object" />
+		</function>
+		<function name="GetPropertyValue" type="object">
+			<description>
+				Outputs the value of the specified property. If the <var>recursive</var> argument is <var>true</var>,
+				the value is taken from the first ancestor (or the node itself) that has a value for the property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+			<argument name="defaultValue" type="object" />
+		</function>
+
+		<function name="GetPropertyValue&lt;T&gt;" type="T">
+			<description>
+				Returns the value of the specified property as the type <strong>T</strong>.
+			</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+		<function name="GetPropertyValue&lt;T&gt;" type="T">
+			<description>
+				Outputs the value of the specified property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="defaultValue" type="T" />
+		</function>
+		<function name="GetPropertyValue&lt;T&gt;" type="T">
+			<description>
+				Outputs the value of the specified property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+		</function>
+		<function name="GetPropertyValue&lt;T&gt;" type="T">
+			<description>
+				Outputs the value of the specified property.
+			</description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+			<argument name="defaultValue" type="T" />
+		</function>
+	</members>
+
+</root>

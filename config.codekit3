@@ -684,6 +684,14 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/src/data/aggregate.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/data/aggregate.xml",
+		"oF": 0
+		},
 	"/src/data/codesamples.xml": {
 		"cB": 0,
 		"ft": 8192,
@@ -692,12 +700,52 @@
 		"oAP": "/build/data/codesamples.xml",
 		"oF": 0
 		},
+	"/src/data/collections.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/data/collections.xml",
+		"oF": 0
+		},
+	"/src/data/filter-order.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/data/filter-order.xml",
+		"oF": 0
+		},
+	"/src/data/ipublishedcontent.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/data/ipublishedcontent.xml",
+		"oF": 0
+		},
+	"/src/data/is-helpers.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/data/is-helpers.xml",
+		"oF": 0
+		},
 	"/src/data/members.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/data/members.xml",
+		"oF": 0
+		},
+	"/src/data/miscellaneous.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/data/miscellaneous.xml",
 		"oF": 0
 		},
 	"/src/data/razor-reference.xml": {
@@ -714,6 +762,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/data/string-helpers.xml",
+		"oF": 0
+		},
+	"/src/data/traversing.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/data/traversing.xml",
+		"oF": 0
+		},
+	"/src/data/umbraco-helper.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/data/umbraco-helper.xml",
 		"oF": 0
 		},
 	"/src/js/app.js": {
@@ -954,7 +1018,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/lib/icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 595604775.03659105
+	"lastBuiltDate": 595605890.87400699
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

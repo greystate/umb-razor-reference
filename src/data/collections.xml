@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	
+	<members category="Collections">
+		<property name="Children" id="ChildrenProperty" type="collection">
+			<description>
+				Gets the children of the node, sorted by their <ref>SortOrder</ref>.
+			</description>
+		</property>
+		
+		<function name="Children" type="collection">
+			<description>
+				Gets the children of the node, sorted by their <ref>SortOrder</ref>.
+			</description>
+			<note>
+				Using this with no arguments is the same as using the <ref id="ChildrenProperty">Children</ref> property. Just included for consistency.
+			</note>
+		</function>
+		
+		<function name="Children" type="collection">
+			<argument name="predicate" type="lambda" />
+		</function>
+		
+		<function name="Children" type="collection">
+			<argument name="alias" type="params" />
+		</function>
+		
+		<function name="Children&lt;T&gt;" type="collection">
+			<description>
+				Returns the children of the specific type <strong>T</strong>.
+			</description>
+		</function>
+		
+		<property name="ChildrenAsList">
+			<description/>
+		</property>
+		
+		<function name="Ancestors" type="collection">
+			<description/>
+		</function>
+		<function name="Ancestors" type="collection">
+			<description/>
+			<argument name="level" type="integer" required="yes"/>
+		</function>
+		<function name="Ancestors" type="collection">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes" />
+		</function>
+		<function name="AncestorsOrSelf" type="collection">
+			<description/>
+		</function>
+		<function name="AncestorsOrSelf" type="collection">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes" />
+		</function>
+		<function name="AncestorsOrSelf" type="collection">
+			<description/>
+			<argument name="level" type="integer" required="yes"/>
+		</function>
+		<function name="Descendants">
+			<description/>
+		</function>
+		<function name="Descendants">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes" />
+		</function>
+		<function name="Descendants">
+			<description/>
+			<argument name="level" type="integer" required="yes"/>
+		</function>
+		<function name="DescendantsOrSelf">
+			<description/>
+		</function>
+		<function name="DescendantsOrSelf">
+			<description/>
+			<argument name="level" type="integer" required="yes"/>
+		</function>
+		<function name="DescendantsOrSelf">
+			<description/>
+			<argument name="nodeTypeAlias" type="string" required="yes" />
+		</function>
+	</members>
+</root>
