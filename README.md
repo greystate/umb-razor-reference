@@ -25,7 +25,7 @@ I use [CodeKit][CK] for preprocessing LESS and [Kit][KIT] files, and a bash scri
 ### Data
 
 The data for this has been (and continues to be) collected from various sources - mainly from the [v6 Strong Cheatsheet][CHEAT] PDF, but also from the Umbraco
-source code and docs. It's a single XML file in the src/data folder.
+source code and docs. It's a single XML file in the src/data folder (which pulls in a couple of files).
 
 The codesamples are also in a separate XML file, so contributing a small code sample for a property or function should be super easy. (Just imagine if that was a JSON file and you had to escape all the double quotes... *crickets* ... :-)
 
