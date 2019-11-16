@@ -11,7 +11,7 @@
 
 	<include href="miscellaneous.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
 	
-	<include href="filter-order" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
+	<include href="filter-order.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
 
 	<include href="aggregate.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
 
