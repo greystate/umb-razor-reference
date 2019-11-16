@@ -67,4 +67,9 @@ var picker = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("panels");
 <h2 id="@Model.MetaPageTitle.ToUrlSegment()">@Model.MetaPageTitle</h2>
 ]]></example>
 
+<example for="IfNullOrWhiteSpace"><![CDATA[
+<h1>@Model.Header.IfNullOrWhiteSpace(Model.Name)</h1>
+]]></example>
+
+
 </codesamples>
