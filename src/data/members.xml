@@ -17,6 +17,6 @@
 
 	<include href="umbraco-helper.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
 
-	<include href="string-helpers.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
+	<include href="string-extensions.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 
 </root>

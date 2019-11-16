@@ -33,6 +33,12 @@
 		"oAP": "/build/.tm_properties",
 		"oF": 1
 		},
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/build.sh": {
 		"cB": 0,
 		"ft": 8192,
@@ -750,12 +756,12 @@
 		"oAP": "/build/data/razor-reference.xml",
 		"oF": 0
 		},
-	"/src/data/string-helpers.xml": {
+	"/src/data/string-extensions.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/build/data/string-helpers.xml",
+		"oAP": "/build/data/string-extensions.xml",
 		"oF": 0
 		},
 	"/src/data/traversing.xml": {
@@ -1012,7 +1018,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/lib/icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 595612536.22998202
+	"lastBuiltDate": 595613208.41700995
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
