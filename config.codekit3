@@ -33,12 +33,6 @@
 		"oAP": "/build/.tm_properties",
 		"oF": 1
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/build.sh": {
 		"cB": 0,
 		"ft": 8192,
@@ -1018,7 +1012,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/lib/icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 595605890.87400699
+	"lastBuiltDate": 595612536.22998202
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
