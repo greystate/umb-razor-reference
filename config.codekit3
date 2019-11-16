@@ -3,7 +3,7 @@
 "buildSteps": [
 	{
 		"name": "Generate members HTML",
-		"scriptSourceString": "xsltproc -o src/kit/macros/_memberlist.kit src/xslt/build-members.xslt src/data/members.xml",
+		"scriptSourceString": "xsltproc --xinclude -o src/kit/macros/_memberlist.kit src/xslt/build-members.xslt src/data/members.xml",
 		"scriptType": 1,
 		"scriptUUIDString": "60F4383F-A593-4D46-AE8A-69F2FB7ECEF8",
 		"stepType": 2,
@@ -94,7 +94,7 @@
 		"oAP": "/build/dist/forkme_right_orange_ff7600.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -193,7 +193,7 @@
 		"oAP": "/build/dist/Umbraco Razor Quick Reference.docset/Contents/Resources/Documents/forkme_right_orange_ff7600.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -212,7 +212,7 @@
 		"oAP": "/build/dist/Umbraco Razor Quick Reference.docset/icon.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -232,7 +232,7 @@
 		"oAP": "/build/img/category-filter-order.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/lib/Icon.png": {
@@ -242,7 +242,7 @@
 		"oAP": "/build/lib/Icon.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -954,7 +954,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/lib/icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 589317100.29280996
+	"lastBuiltDate": 595604775.03659105
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
