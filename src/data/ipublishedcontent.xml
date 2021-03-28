@@ -41,7 +41,7 @@
 				<p>Also good for anchor links to various sections on a page (see code example)</p>
 			</description>
 		</property>
-		<property name="UrlSegment" type="string" version="8">
+		<property name="UrlSegment" id="UrlSegmentProperty" type="string" minVersion="8">
 			<description>
 				<p>
 					A URL-safe version of the node's name, e.g. for a document named <strong>About Us</strong>
@@ -50,9 +50,9 @@
 				<p>Also good for anchor links to various sections on a page (see code example)</p>
 			</description>
 		</property>
-		<property name="UrlSegment" type="string" version="8">
+		<function name="UrlSegment" type="string" minVersion="8">
 			<argument name="culture" type="string" />
-		</property>
+		</function>
 		<property name="DocumentTypeAlias" type="string">
 			<description>
 				Returns the alias of the Document Type used by this content item.

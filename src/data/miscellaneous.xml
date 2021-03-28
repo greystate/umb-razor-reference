@@ -40,11 +40,17 @@
 			<note>This function requires a custom property with the alias <var>umbracoNaviHide</var> to work!</note>
 		</function>
 		
-		<function name="Site" type="node" version="7">
+		<function name="Site" type="node" maxVersion="7">
 			<description>
 				Gets the ancestor at level 1
 			</description>
-			<note>In v8 this will be renamed to <code>.Root()</code></note>
+			<note>In v8 this was renamed to <code>.Root()</code></note>
+		</function>
+		
+		<function name="Root" type="node" minVersion="8">
+			<description>
+				Gets the ancestor at level 1 (usually a site's root node).
+			</description>
 		</function>
 		
 		<function name="GetCulture" type="System.Globalization.CultureInfo" minVersion="7.2.7">
