@@ -71,5 +71,14 @@ var picker = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("panels");
 <h1>@Model.Header.IfNullOrWhiteSpace(Model.Name)</h1>
 ]]></example>
 
+<example for="InGroupsOf"><![CDATA[
+@foreach (var projects in projectsToShow.InGroupsOf(5)) {
+<ul class="group">
+	@foreach(var project in projects) {
+		<li>@project.Name</li>
+	}
+</ul>
+}
+]]></example>
 
 </codesamples>
