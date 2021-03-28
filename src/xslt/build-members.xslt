@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE xsl:stylesheet [
 	<!ENTITY arrow "&#x21d2;">
+	<!ENTITY idChars "&lt;&gt;">
+	<!ENTITY idReplaceChars "_">
 ]>
 <xsl:stylesheet
 	version="1.0"
@@ -15,7 +17,7 @@
 			<xsl:value-of select="name()" />
 			<xsl:if test="$samples[@for = current()/@name]"> has-example</xsl:if>
 		</xsl:attribute>
-		<xsl:attribute name="id"><xsl:value-of select="@name" /></xsl:attribute>
+		<xsl:attribute name="id"><xsl:value-of select="translate(@name, '&idChars;', '&idReplaceChars;')" /></xsl:attribute>
 	</xsl:attribute-set>
 	
 	<xsl:key name="membersIndex" match="property | function" use="@name" />
@@ -191,7 +193,7 @@
 	</xsl:template>
 	
 	<xsl:template match="@name" mode="link">
-		<a href="#{.}">
+		<a href="#{translate(., '&idChars;', '&idReplaceChars;')}">
 			<xsl:if test="../@id"><xsl:attribute name="href"><xsl:value-of select="concat('#', ../@id)" /></xsl:attribute></xsl:if>
 			<xsl:value-of select="." />
 			<xsl:if test="parent::function">()</xsl:if>
