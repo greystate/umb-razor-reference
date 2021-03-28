@@ -81,4 +81,12 @@ var picker = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("panels");
 }
 ]]></example>
 
+<example for="Root"><![CDATA[
+@{
+var currentPage = Model;
+var siteRoot = currentPage.Root();
+}
+<title>@(currentPage.Name) — @(siteRoot.Name)</title>
+]]></example>
+
 </codesamples>
