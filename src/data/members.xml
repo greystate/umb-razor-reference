@@ -9,14 +9,16 @@
 
 	<include href="traversing.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-	<include href="miscellaneous.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
-	
-	<include href="filter-order.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
+	<include href="miscellaneous.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-	<include href="aggregate.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
+	<include href="filter-order.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-	<include href="umbraco-helper.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />	
+	<include href="aggregate.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+	<include href="umbraco-helper.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 
 	<include href="string-extensions.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+	<include href="char-extensions.xml" xpointer="xpointer(/root/members)" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 
 </root>

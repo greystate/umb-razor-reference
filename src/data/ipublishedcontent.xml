@@ -32,7 +32,7 @@
 				this will return a full URL with protocol, hostname &amp; port etc.
 			</note>
 		</property>
-		<property name="UrlName" type="string">
+		<property name="UrlName" type="string" maxVersion="7">
 			<description>
 				<p>
 					A URL-safe version of the node's name, e.g. for a document named <strong>About Us</strong>
@@ -53,10 +53,13 @@
 		<function name="UrlSegment" type="string" minVersion="8">
 			<argument name="culture" type="string" />
 		</function>
-		<property name="DocumentTypeAlias" type="string">
+		<property name="DocumentTypeAlias" type="string" maxVersion="7">
 			<description>
 				Returns the alias of the Document Type used by this content item.
 			</description>
+			<note>
+				In v8 this is found as <code>.ContentType.Alias</code>
+			</note>
 		</property>
 		<property name="WriterName" type="string">
 			<description/>
@@ -157,6 +160,17 @@
 			<argument name="propertyAlias" type="string" />
 			<argument name="recursive" type="boolean" />
 			<argument name="defaultValue" type="T" />
+		</function>
+		<function name="Url" type="string" id="UrlFunction" minVersion="8">
+			<description>
+				The absolute URL (e.g. <code>/my/page/about-url/</code>) of the content item. Whenever you need to link to a page,
+				this is what you should use.
+			</description>
+			<argument name="culture" type="string" />
+			<note>
+				If the config setting <code>&lt;useDomainPrefixes&gt;</code> in umbracoSetting.config is <code>true</code>,
+				this will return a full URL with protocol, hostname &amp; port etc.
+			</note>
 		</function>
 	</members>
 

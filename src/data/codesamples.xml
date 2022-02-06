@@ -13,12 +13,12 @@ var siteRoot = Model.AncestorOrSelf(1);
 
 	<example for="UrlName" lang="markup"><![CDATA[
 <!-- Get a meaningful ID that can be linked to -->
-<section id="@Model.UrlName">
-	<h2>@Model.Name</h2>
+<section id="@(Model.UrlName)">
+	<h2>@(Model.Name)</h2>
 	...
 </section>
 ...
-<a href="#@Model.UrlName">See the @Model.Name section above</a>
+<a href="#@(Model.UrlName)">See the @(Model.Name) section above</a>
 ]]></example>
 
 	<example for="Url"><![CDATA[
@@ -37,7 +37,7 @@ var siteRoot = Model.AncestorOrSelf(1);
 // Pick a random widget to display
 var widgets = Model.Children<Widget>().RandomOrder().FirstOrDefault();
 ]]></example>
-	
+
 	<example for="GetCulture"><![CDATA[
 @{
 	var siteRoot = Model.Site();
