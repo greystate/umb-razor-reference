@@ -1,0 +1,18 @@
+{
+  "clips" : [
+    {
+      "content" : "<function name=\"$0\" type=\"${:string}\">\n\t<description>\n\t\t${:Returns...}\n\t<\/description>\n<\/function>\n",
+      "name" : "Function",
+      "scope" : "editor",
+      "syntax" : "xml",
+      "trigger" : "func"
+    },
+    {
+      "content" : "<argument name=\"$0\" type=\"${:string}\" \/>",
+      "name" : "Argument",
+      "scope" : "editor",
+      "syntax" : "xml",
+      "trigger" : "arg"
+    }
+  ]
+}
