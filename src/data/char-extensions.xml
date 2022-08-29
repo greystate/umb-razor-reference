@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<members category="Character Extensions">
+		<description>
+			These are all available on character objects.
+		</description>
+
+		<function name="IsVowel" type="bool" receiver="char">
+			<description>
+				Returns <var>true</var> if the character is a vowel.
+			</description>
+		</function>
+
+	</members>
+</root>

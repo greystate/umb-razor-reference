@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<members category="Aggregate Functions">
+		<description>
+			
+		</description>
+
+		<function name="Count" type="int">
+			<description></description>
+		</function>
+		<function name="Min" type="number">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+		<function name="Max" type="number">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+		<function name="Average" type="number">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+		<function name="Sum" type="number">
+			<description></description>
+			<argument name="func" type="lambda" />
+		</function>
+	</members>
+	
+</root>

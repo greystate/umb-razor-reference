@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<members category="UmbracoHelper" staticObject="@Umbraco">
+		<description>
+			These are available on the <code>@Umbraco</code> object inside the template.
+		</description>
+
+		<function name="If" type="string">
+			<description>
+				Returns one of two values depending on the result of a test.
+			</description>
+			<argument name="test" type="bool" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+
+		<function name="Truncate">
+			<description>
+				Truncates a string to a given length and can add an ellipsis (&#8230;) at the end.
+				The method checks for open HTML tags, and makes sure to close them.
+			</description>
+			<argument name="html" type="string" />
+			<argument name="length" type="int" />
+			<argument name="addEllipsis" type="boolean" required="no" />
+			<argument name="treatTagsAsContent" type="boolean" required="no" />
+		</function>
+
+		<function name="TruncateByWords" type="html">
+			<description>
+				Truncates a string to a given amount of words and can add an ellipsis (&#8230;) at the end.
+				The method checks for open HTML tags, and makes sure to close them.
+			</description>
+			<argument name="html" type="string" />
+			<argument name="words" type="int" />
+			<argument name="addEllipsis" type="boolean" required="no" />
+		</function>
+
+		<function name="Coalesce" type="string">
+			<description>
+				Returns the first non-null value in the list of arguments.
+			</description>
+			<argument name="value" type="params" />
+		</function>
+
+		<function name="Concatenate" type="string">
+			<description>
+				Returns all of its arguments concatenated into a single string.
+			</description>
+			<argument name="value" type="params" />
+		</function>
+
+		<function name="Join" type="string">
+			<description>
+				Returns all of its arguments joined with a specific separator between each of them.
+			</description>
+			<argument name="seperator" type="string" />
+			<argument name="value" type="params" />
+		</function>
+
+		<function name="StripHTML" type="html">
+			<description>
+				Strips HTML tags from a given string, leaving the contents of the tags in place.
+				If no <var>tag</var>s are specified, all HTML tags are stripped.
+			</description>
+			<argument name="html" type="string" />
+			<argument name="tag" type="params" required="no" />
+		</function>
+
+		<function name="ReplaceLineBreaksForHtml" type="string">
+			<description>
+				Replace linebreaks with HTML <code>&lt;br /&gt;</code> tags.
+			</description>
+			<argument name="text" type="string" />
+		</function>
+
+		<function name="CreateHash" type="string">
+			<description>
+				Generates a hash based on the text string passed in.
+				This method will detect the security requirements (is FIPS enabled) and return an appropriate hash.
+			</description>
+			<argument name="text" type="string" />
+		</function>
+
+		<function name="GetDictionaryValue" type="string">
+			<description>
+				Returns the dictionary value for the specified key.
+				You can specify an <var>altText</var> fallback value to be returned if the dictionary has no value for <var>key</var>.
+			</description>
+			<argument name="key" type="string" />
+			<argument name="altText" type="string" required="no" />
+		</function>
+
+	</members>
+
+</root>

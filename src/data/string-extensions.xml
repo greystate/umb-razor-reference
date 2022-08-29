@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<members category="String Extensions">
+		<description>
+			These are all available on string objects.
+		</description>
+
+		<function name="ToUrlSegment" type="string">
+			<description>
+				Returns a string that can be used as a segment of a URL.
+			</description>
+			<argument name="culture" type="string" required="no" />
+		</function>
+
+		<function name="EnsureStartsWith">
+			<description>
+				Use this to make sure a string starts with a specific substring or character.
+			</description>
+			<argument name="toStartWith" type="string" />
+		</function>
+		<function name="EnsureStartsWith">
+			<argument name="toStartWith" type="char" />
+		</function>
+
+		<function name="EnsureEndsWith">
+			<description>
+				Use this to make sure a string ends with a specific substring or character.
+			</description>
+			<argument name="toEndWith" type="string" />
+		</function>
+		<function name="EnsureEndsWith">
+			<argument name="toEndWith" type="char" />
+		</function>
+
+		<function name="IsNullOrWhiteSpace" type="bool">
+			<description>
+				Indicates whether a specified string is null, empty,
+				or consists only of white-space characters.
+			</description>
+		</function>
+
+		<function name="IfNullOrWhiteSpace">
+			<description>
+				Returns the <var>defaultValue</var> if the string is null, empty or whitespace-only.
+			</description>
+			<argument name="defaultValue" type="string" />
+		</function>
+
+		<function name="MakePluralName" type="string">
+			<description>
+				Returns a pluralized version of the string.
+			</description>
+		</function>
+
+		<function name="GetFileExtension" type="string">
+			<description>
+				Returns the file extension of a string that represents a filename or a URL.
+			</description>
+		</function>
+
+		<function name="DetectIsJson" type="bool">
+			<description>
+				Returns <var>true</var> if the string looks like it is a JSON chunk.
+			</description>
+		</function>
+
+		<function name="CleanForXss" type="string">
+			<description>
+				Cleans string to aid in preventing XSS attacks.
+			</description>
+		</function>
+
+		<function name="Trim" type="string">
+			<description>
+				Trims any occurrences of <var>forRemoving</var> from the start
+				and end	of the string.
+			</description>
+			<argument name="forRemoving" type="string" />
+		</function>
+
+		<function name="TrimStart" type="string">
+			<description>
+				Trims any occurrences of <var>forRemoving</var> from the start
+				of the string.
+			</description>
+			<argument name="forRemoving" type="string" />
+		</function>
+
+		<function name="TrimEnd" type="string">
+			<description>
+				Trims any occurrences of <var>forRemoving</var> from the end
+				of the string.
+			</description>
+			<argument name="forRemoving" type="string" />
+		</function>
+
+		<function name="ToDelimitedList" type="collection">
+			<description>
+				Returns a trimmed list of strings by splitting on the <var>delimiter</var> (defaults to "," if unspecified).
+			</description>
+			<argument name="delimiter" type="string" required="no" />
+		</function>
+
+		<function name="StripHtml" type="string">
+			<description>
+				Strips all HTML from a string.
+			</description>
+		</function>
+
+		<function name="ConvertToHex" type="string">
+			<description>
+				Converts a number in a string to hexadecimal.
+			</description>
+		</function>
+
+		<function name="DecodeFromHex" type="string">
+			<description>
+				Decodes a hexadecimal string to a number (as a string).
+			</description>
+		</function>
+
+		<function name="InvariantEquals" type="bool">
+			<description>
+				Compares the string to another string and returns <var>true</var>
+				if they are considered equal (using invariant culture and ignoring casing).
+			</description>
+			<argument name="compareTo" type="string" />
+		</function>
+
+		<function name="InvariantStartsWith" type="bool">
+			<description>
+				Returns <var>true</var> if the string starts with <var>compareTo</var>,
+				not considering casing and using the invariant culture.
+			</description>
+			<argument name="compareTo" type="string" />
+		</function>
+
+		<function name="InvariantEndsWith" type="bool">
+			<description>
+				Returns <var>true</var> if the string ends with <var>compareTo</var>,
+				not considering casing and using the invariant culture.
+			</description>
+			<argument name="compareTo" type="string" />
+		</function>
+
+		<function name="InvariantContains" type="bool">
+			<description>
+				Returns <var>true</var> if the string contains <var>compareTo</var>,
+				not considering casing and using the invariant culture.
+			</description>
+			<argument name="compareTo" type="string" />
+		</function>
+
+		<function name="ToUrlBase64" type="string">
+			<description>
+				Encodes the string to a Base64 URL safe string.
+			</description>
+		</function>
+
+		<function name="FromUrlBase64" type="string">
+			<description>
+				Decodes a Base64 URL safe string back to its original.
+			</description>
+		</function>
+
+		<function name="Truncate" type="string" id="TruncateString">
+			<description>
+				Truncates the <var>text</var> string to <var>maxLength</var> characters,
+				adding <var>suffix</var> (or <code>"..."</code> if not specified) at
+				the end when necessary.
+			</description>
+			<argument name="text" type="string" />
+			<argument name="maxLength" type="int" />
+			<argument name="suffix" type="string" required="no" />
+		</function>
+
+		<function name="StripNewLines" type="string">
+			<description>
+				Strips carrage returns and line feeds from the specified text.
+			</description>
+		</function>
+
+		<function name="ToSingleLine" type="string">
+			<description>
+				Converts to single line by replacing line breaks with spaces.
+			</description>
+		</function>
+
+		<function name="OrIfNullOrWhiteSpace" type="string">
+			<description>
+				Returns the string if it isn't null or blank - otherwise
+				returns <var>alternative</var>.
+			</description>
+			<argument name="alternative" type="string" />
+		</function>
+
+		<function name="ToFirstUpper" type="string">
+			<description>
+				Returns a copy of the string with the first character converted to uppercase.
+			</description>
+			<argument name="culture" type="CultureInfo" required="no" />
+		</function>
+
+		<function name="ToFirstUpperInvariant" type="string">
+			<description>
+				Returns a copy of the string with the first character converted
+				to uppercase using the casing rules of the invariant culture.
+			</description>
+		</function>
+
+		<function name="ToFirstLower" type="string">
+			<description>
+				Returns a copy of the string with the first character converted to lowercase.
+			</description>
+			<argument name="culture" type="CultureInfo" required="no" />
+		</function>
+
+		<function name="ToFirstLowerInvariant" type="string">
+			<description>
+				Returns a copy of the string with the first character converted
+				to lowercase using the casing rules of the invariant culture.
+			</description>
+		</function>
+
+		<function name="ToSafeAlias" type="string">
+			<description>
+				Cleans a string to produce a string that can safely be used in an alias.
+			</description>
+		</function>
+
+		<function name="ToSafeAlias" type="string">
+			<argument name="camel" type="bool" />
+		</function>
+
+		<function name="ToSafeAlias" type="string">
+			<argument name="culture" type="string" />
+		</function>
+
+
+	</members>
+</root>

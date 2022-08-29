@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<members category="Miscellaneous">
+		<function name="HasProperty" type="boolean">
+			<description>Returns a boolean value representing if the IPublishedContent has a property with the specified alias.</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+
+		<function name="HasValue" type="boolean">
+			<description>Returns a boolean value representing if the IPublishedContent property has had a value set.</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+
+		<function name="HasValue" type="boolean">
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+		</function>
+
+		<function name="HasValue" type="html">
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+			<argument name="valueIfTrue" type="string" />
+			<argument name="valueIfFalse" type="string" required="no" />
+		</function>
+
+		<function name="IsNull" type="boolean">
+			<description>Returns a boolean value representing if the <code>IPublishedContent</code> property is Null.</description>
+			<argument name="propertyAlias" type="string" />
+		</function>
+
+		<function name="IsNull" type="boolean">
+			<description></description>
+			<argument name="propertyAlias" type="string" />
+			<argument name="recursive" type="boolean" />
+		</function>
+		
+		<function name="IsVisible" type="boolean">
+			<description>
+			</description>
+			<note>This function requires a custom property with the alias <var>umbracoNaviHide</var> to work!</note>
+		</function>
+		
+		<function name="Site" type="node" maxVersion="7">
+			<description>
+				Gets the ancestor at level 1
+			</description>
+			<note>In v8 this was renamed to <code>.Root()</code></note>
+		</function>
+		
+		<function name="Root" type="node" minVersion="8">
+			<description>
+				Gets the ancestor at level 1 (usually a site's root node).
+			</description>
+		</function>
+		
+		<function name="GetCulture" type="System.Globalization.CultureInfo" minVersion="7.2.7">
+			<description>
+				Gets the culture that would be used to render the content,
+				within the context of a specified current request.
+			</description>
+			<argument name="current" type="uri" required="no" />
+		</function>
+	</members>
+	
+</root>

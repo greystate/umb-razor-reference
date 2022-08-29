@@ -13,12 +13,12 @@ var siteRoot = Model.AncestorOrSelf(1);
 
 	<example for="UrlName" lang="markup"><![CDATA[
 <!-- Get a meaningful ID that can be linked to -->
-<section id="@Model.UrlName">
-	<h2>@Model.Name</h2>
+<section id="@(Model.UrlName)">
+	<h2>@(Model.Name)</h2>
 	...
 </section>
 ...
-<a href="#@Model.UrlName">See the @Model.Name section above</a>
+<a href="#@(Model.UrlName)">See the @(Model.Name) section above</a>
 ]]></example>
 
 	<example for="Url"><![CDATA[
@@ -28,15 +28,16 @@ var siteRoot = Model.AncestorOrSelf(1);
 ]]></example>
 
 	<example for="IsVisible"><![CDATA[
-@foreach (var item in Model.Children.Where(x => x.IsVisible()) {
+@foreach (var item in Model.Children.Where(x => x.IsVisible())) {
 	...
-})]]></example>
+}
+]]></example>
 
 	<example for="RandomOrder"><![CDATA[
 // Pick a random widget to display
 var widgets = Model.Children<Widget>().RandomOrder().FirstOrDefault();
 ]]></example>
-	
+
 	<example for="GetCulture"><![CDATA[
 @{
 	var siteRoot = Model.Site();
@@ -54,5 +55,38 @@ var breaking = Model.Children<NewsItem>().Where(x => x.Category == "breaking");
 <a href="#top">@Umbraco.GetDictionaryValue("TopLabel")</a>
 ]]></example>
 
-	
+<example for="GetPropertyValue"><![CDATA[
+<title>@Model.GetPropertyValue("pageTitle", Model.Name)</title>
+]]></example>
+
+<example for="GetPropertyValue&lt;T&gt;"><![CDATA[
+var picker = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("panels");
+]]></example>
+
+<example for="ToUrlSegment"><![CDATA[
+<h2 id="@Model.MetaPageTitle.ToUrlSegment()">@Model.MetaPageTitle</h2>
+]]></example>
+
+<example for="IfNullOrWhiteSpace"><![CDATA[
+<h1>@Model.Header.IfNullOrWhiteSpace(Model.Name)</h1>
+]]></example>
+
+<example for="InGroupsOf"><![CDATA[
+@foreach (var projects in projectsToShow.InGroupsOf(5)) {
+<ul class="group">
+	@foreach(var project in projects) {
+		<li>@project.Name</li>
+	}
+</ul>
+}
+]]></example>
+
+<example for="Root"><![CDATA[
+@{
+var currentPage = Model;
+var siteRoot = currentPage.Root();
+}
+<title>@(currentPage.Name) — @(siteRoot.Name)</title>
+]]></example>
+
 </codesamples>
